@@ -1,0 +1,58 @@
+Skills (Enchanter)
+==================
+
+Animate
+-------
+.. automodule:: pymirokai.features.skills.enchanter.animate
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Freeze
+------
+.. automodule:: pymirokai.features.skills.enchanter.freeze
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Interact
+--------
+.. automodule:: pymirokai.features.skills.enchanter.interact
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Manipulate
+----------
+.. automodule:: pymirokai.features.skills.enchanter.manipulate
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Navigate
+--------
+.. automodule:: pymirokai.features.skills.enchanter.navigate
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Show-Off
+--------
+.. automodule:: pymirokai.features.skills.enchanter.show_off
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+System
+--------
+.. automodule:: pymirokai.features.skills.enchanter.system
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Transport
+---------
+.. automodule:: pymirokai.features.skills.enchanter.transport
+   :members:
+   :undoc-members:
+   :show-inheritance:

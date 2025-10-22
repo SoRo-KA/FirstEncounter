@@ -1,0 +1,37 @@
+Features
+========
+
+Behavior
+--------
+.. automodule:: pymirokai.features.abilities.behavior
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Generic
+-------
+.. automodule:: pymirokai.features.abilities.generic
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Interaction
+-----------
+.. automodule:: pymirokai.features.abilities.interaction
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Navigation
+----------
+.. automodule:: pymirokai.features.abilities.navigation
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Runes
+-----
+.. automodule:: pymirokai.features.abilities.runes
+   :members:
+   :undoc-members:
+   :show-inheritance:

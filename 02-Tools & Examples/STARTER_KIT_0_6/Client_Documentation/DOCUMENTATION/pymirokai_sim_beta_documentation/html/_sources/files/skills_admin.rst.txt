@@ -1,0 +1,58 @@
+Skills (Admin)
+==============
+
+Animate
+-------
+.. automodule:: pymirokai.features.skills.admin.animate
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Freeze
+------
+.. automodule:: pymirokai.features.skills.admin.freeze
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Interact
+--------
+.. automodule:: pymirokai.features.skills.admin.interact
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Manipulate
+----------
+.. automodule:: pymirokai.features.skills.admin.manipulate
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Navigate
+--------
+.. automodule:: pymirokai.features.skills.admin.navigate
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Show-Off
+--------
+.. automodule:: pymirokai.features.skills.admin.show_off
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+System
+--------
+.. automodule:: pymirokai.features.skills.admin.system
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Transport
+---------
+.. automodule:: pymirokai.features.skills.admin.transport
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Getting Started &mdash; Python  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Robot" href="robot.html" />
+    <link rel="prev" title="Welcome to the Pymirokai Documentation !" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Python
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#table-of-contents">Table of Contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#key-methods">Key Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#robot-class-usage">Robot Class Usage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#initialization">Initialization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#connecting-to-the-robot">Connecting to the Robot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#disconnecting-from-the-robot">Disconnecting from the Robot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sending-commands">Sending Commands</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#example-commands">Example Commands</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mission-interface">Mission Interface</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#subscribing-to-topics">Subscribing to Topics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#registering-callbacks">Registering Callbacks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example-usage">Example Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#conclusion">Conclusion</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="robot.html">Robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="skills_user.html">Skills (User)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="skills_admin.html">Skills (Admin)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="core.html">Core Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="enums.html">Enums</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models.html">Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utils.html">Utils</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Python</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Getting Started</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/files/getting_started.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="getting-started">
+<h1>Getting Started<a class="headerlink" href="#getting-started" title="Link to this heading"></a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>This documentation provides comprehensive information on how to use the <code class="docutils literal notranslate"><span class="pre">Robot</span></code> class. The <code class="docutils literal notranslate"><span class="pre">Robot</span></code> class integrates all features and handles operations, making it easier for developers to control and interact with the robot through REST and WebSocket APIs.</p>
+</section>
+<section id="table-of-contents">
+<h2>Table of Contents<a class="headerlink" href="#table-of-contents" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="#getting-started"><span class="xref myst">Getting Started</span></a></p>
+<ul>
+<li><p><a class="reference internal" href="#overview"><span class="xref myst">Overview</span></a></p></li>
+<li><p><a class="reference internal" href="#table-of-contents"><span class="xref myst">Table of Contents</span></a></p></li>
+<li><p><a class="reference internal" href="#introduction"><span class="xref myst">Introduction</span></a></p></li>
+<li><p><a class="reference internal" href="#key-methods"><span class="xref myst">Key Methods</span></a></p></li>
+<li><p><a class="reference internal" href="#robot-class-usage"><span class="xref myst">Robot Class Usage</span></a></p>
+<ul>
+<li><p><a class="reference internal" href="#initialization"><span class="xref myst">Initialization</span></a></p></li>
+<li><p><a class="reference internal" href="#connecting-to-the-robot"><span class="xref myst">Connecting to the Robot</span></a></p></li>
+<li><p><a class="reference internal" href="#disconnecting-from-the-robot"><span class="xref myst">Disconnecting from the Robot</span></a></p></li>
+<li><p><a class="reference internal" href="#sending-commands"><span class="xref myst">Sending Commands</span></a></p>
+<ul>
+<li><p><a class="reference internal" href="#example-commands"><span class="xref myst">Example Commands</span></a></p></li>
+<li><p><a class="reference internal" href="#mission-interface"><span class="xref myst">Mission Interface</span></a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#subscribing-to-topics"><span class="xref myst">Subscribing to Topics</span></a></p></li>
+<li><p><a class="reference internal" href="#registering-callbacks"><span class="xref myst">Registering Callbacks</span></a></p></li>
+<li><p><a class="reference internal" href="#example-usage"><span class="xref myst">Example Usage</span></a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#conclusion"><span class="xref myst">Conclusion</span></a></p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">Robot</span></code> class is designed to facilitate communication and control of a robot through REST and WebSocket APIs. This class encapsulates various features such as interaction, navigation, behavior control, grasping, and more, making it a powerful tool for robot management and automation.</p>
+</section>
+<section id="key-methods">
+<h2>Key Methods<a class="headerlink" href="#key-methods" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">connect(ip:</span> <span class="pre">str,</span> <span class="pre">api_key:</span> <span class="pre">str)</span> <span class="pre">-&gt;</span> <span class="pre">BaseRobot.Connection</span></code>: Connects to the WebSocket and REST server.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subscribe(topic:</span> <span class="pre">str)</span></code>: Subscribes to a WebSocket topic.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">unsubscribe(topic:</span> <span class="pre">str)</span></code>: Unsubscribes from a WebSocket topic.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publish(topic:</span> <span class="pre">str,</span> <span class="pre">data:</span> <span class="pre">str)</span></code>: Publishes data to a WebSocket topic.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">register_callback(topic:</span> <span class="pre">str,</span> <span class="pre">callback:</span> <span class="pre">Callable[[dict],</span> <span class="pre">None])</span></code>: Registers a callback function for a WebSocket topic.</p></li>
+</ul>
+</section>
+<section id="robot-class-usage">
+<h2>Robot Class Usage<a class="headerlink" href="#robot-class-usage" title="Link to this heading"></a></h2>
+<section id="initialization">
+<h3>Initialization<a class="headerlink" href="#initialization" title="Link to this heading"></a></h3>
+<p>To use the <code class="docutils literal notranslate"><span class="pre">Robot</span></code> class, you need to initialize it.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pymirokai.robot</span> <span class="kn">import</span> <span class="n">Robot</span>
+
+<span class="n">robot</span> <span class="o">=</span> <span class="n">Robot</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Alternatively, you can have a robot object already connected with automatic disconnection at the end of a scope:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pymirokai.robot</span> <span class="kn">import</span> <span class="n">connect</span>
+
+<span class="k">async</span> <span class="k">with</span> <span class="n">connect</span><span class="p">(</span><span class="n">robot_ip</span><span class="p">,</span> <span class="n">api_key</span><span class="p">)</span> <span class="k">as</span> <span class="n">robot</span><span class="p">:</span>
+    <span class="c1"># Example of code using the connected robot object</span>
+    <span class="k">await</span> <span class="n">robot</span><span class="o">.</span><span class="n">say</span><span class="p">(</span><span class="s2">&quot;Hello world&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">completed</span><span class="p">()</span>
+<span class="c1"># When the scope is finished, the robot object is disconnected</span>
+</pre></div>
+</div>
+</section>
+<section id="connecting-to-the-robot">
+<h3>Connecting to the Robot<a class="headerlink" href="#connecting-to-the-robot" title="Link to this heading"></a></h3>
+<p>To connect to a robot with the appropriate API URLs and configuration parameters, use the <code class="docutils literal notranslate"><span class="pre">connect</span></code> function.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">connection</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">robot_ip</span><span class="p">,</span> <span class="n">api_key</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>To wait for the connection to finish, you can do:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">await</span> <span class="n">connection</span><span class="o">.</span><span class="n">connected</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="disconnecting-from-the-robot">
+<h3>Disconnecting from the Robot<a class="headerlink" href="#disconnecting-from-the-robot" title="Link to this heading"></a></h3>
+<p>To disconnect from the robot and wait for the disconnection to be finished, use the <code class="docutils literal notranslate"><span class="pre">cancel_and_complete()</span></code> method on the <code class="docutils literal notranslate"><span class="pre">connection</span></code> object returned by <code class="docutils literal notranslate"><span class="pre">robot.connect</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">await</span> <span class="n">connection</span><span class="o">.</span><span class="n">cancel_and_complete</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="sending-commands">
+<h3>Sending Commands<a class="headerlink" href="#sending-commands" title="Link to this heading"></a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">Robot</span></code> class provides various methods to send commands to the robot. These methods return a <code class="docutils literal notranslate"><span class="pre">Mission</span></code> object that allows you to wait for the command to be started on the robot and to wait for the command to be finished. The <code class="docutils literal notranslate"><span class="pre">Mission</span></code> object also allows you to cancel the command.</p>
+<section id="example-commands">
+<h4>Example Commands<a class="headerlink" href="#example-commands" title="Link to this heading"></a></h4>
+<p>Some commands return a <code class="docutils literal notranslate"><span class="pre">Mission</span></code> object:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mission</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">go_to_relative</span><span class="p">(</span><span class="n">Coordinates</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">2.0</span><span class="p">,</span> <span class="n">theta</span><span class="o">=</span><span class="mf">0.0</span><span class="p">))</span>
+<span class="n">mission</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">say</span><span class="p">(</span><span class="s2">&quot;Hello, world!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Some commands are simply getters/setters on the robot:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">get_detected_runes</span><span class="p">()</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">set_sound_level</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">set_robot_max_velocity</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="mission-interface">
+<h4>Mission Interface<a class="headerlink" href="#mission-interface" title="Link to this heading"></a></h4>
+<p>To wait for a mission to be started:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">await</span> <span class="n">mission</span><span class="o">.</span><span class="n">started</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>To wait for a mission to be finished:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">await</span> <span class="n">mission</span><span class="o">.</span><span class="n">completed</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Note that both previous commands raise exceptions when an error occurs or when the mission has been cancelled.</p>
+<p>To wait for a mission to be finished without being bothered by exceptions, use <code class="docutils literal notranslate"><span class="pre">completed_ignoring_exception</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">await</span> <span class="n">mission</span><span class="o">.</span><span class="n">completed_ignoring_exception</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>To cancel a mission:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">await</span> <span class="n">mission</span><span class="o">.</span><span class="n">cancel</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>To cancel and wait for the mission to be finished:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">await</span> <span class="n">mission</span><span class="o">.</span><span class="n">cancel_and_complete</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="subscribing-to-topics">
+<h3>Subscribing to Topics<a class="headerlink" href="#subscribing-to-topics" title="Link to this heading"></a></h3>
+<p>To subscribe to WebSocket topics, use the <code class="docutils literal notranslate"><span class="pre">subscribe</span></code> method.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">robot</span><span class="o">.</span><span class="n">subscribe</span><span class="p">(</span><span class="s2">&quot;grasping_state&quot;</span><span class="p">)</span>
+<span class="n">robot</span><span class="o">.</span><span class="n">subscribe</span><span class="p">(</span><span class="s2">&quot;navigation_state&quot;</span><span class="p">)</span>
+<span class="n">robot</span><span class="o">.</span><span class="n">subscribe</span><span class="p">(</span><span class="s2">&quot;battery_voltage&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="registering-callbacks">
+<h3>Registering Callbacks<a class="headerlink" href="#registering-callbacks" title="Link to this heading"></a></h3>
+<p>You can register callback functions to handle messages received from specific topics.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">handle_grasping_state</span><span class="p">(</span><span class="n">message</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Grasping State: </span><span class="si">{</span><span class="n">message</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">handle_navigation_state</span><span class="p">(</span><span class="n">message</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Navigation State: </span><span class="si">{</span><span class="n">message</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">handle_battery_voltage</span><span class="p">(</span><span class="n">message</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Battery Voltage: </span><span class="si">{</span><span class="n">message</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">robot</span><span class="o">.</span><span class="n">register_callback</span><span class="p">(</span><span class="s2">&quot;grasping_state&quot;</span><span class="p">,</span> <span class="n">handle_grasping_state</span><span class="p">)</span>
+<span class="n">robot</span><span class="o">.</span><span class="n">register_callback</span><span class="p">(</span><span class="s2">&quot;navigation_state&quot;</span><span class="p">,</span> <span class="n">handle_navigation_state</span><span class="p">)</span>
+<span class="n">robot</span><span class="o">.</span><span class="n">register_callback</span><span class="p">(</span><span class="s2">&quot;battery_voltage&quot;</span><span class="p">,</span> <span class="n">handle_battery_voltage</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="example-usage">
+<h3>Example Usage<a class="headerlink" href="#example-usage" title="Link to this heading"></a></h3>
+<p>Here is an example script that you can launch on the robot:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;Example file to test robot abilities.&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">argparse</span>
+<span class="kn">import</span> <span class="nn">asyncio</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">from</span> <span class="nn">pymirokai.enums</span> <span class="kn">import</span> <span class="n">Hand</span>
+<span class="kn">from</span> <span class="nn">pymirokai.models.data_models</span> <span class="kn">import</span> <span class="n">EnchantedObject</span><span class="p">,</span> <span class="n">Coordinates</span>
+<span class="kn">from</span> <span class="nn">pymirokai.robot</span> <span class="kn">import</span> <span class="n">connect</span><span class="p">,</span> <span class="n">Robot</span>
+<span class="kn">from</span> <span class="nn">pymirokai.utils.get_local_ip</span> <span class="kn">import</span> <span class="n">get_local_ip</span>
+<span class="kn">from</span> <span class="nn">pymirokai.utils.run_until_interruption</span> <span class="kn">import</span> <span class="n">run_until_interruption</span>
+
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s2">&quot;pymirokai&quot;</span><span class="p">)</span>
+
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="n">ip</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">api_key</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Run the robot, demonstrating various features.&quot;&quot;&quot;</span>
+    <span class="k">async</span> <span class="k">with</span> <span class="n">connect</span><span class="p">(</span><span class="n">ip</span><span class="p">,</span> <span class="n">api_key</span><span class="p">)</span> <span class="k">as</span> <span class="n">robot</span><span class="p">:</span>
+        <span class="k">await</span> <span class="n">robot_behavior</span><span class="p">(</span><span class="n">robot</span><span class="p">)</span>
+        <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">Future</span><span class="p">()</span>  <span class="c1"># Wait indefinitely</span>
+
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">robot_behavior</span><span class="p">(</span><span class="n">robot</span><span class="p">:</span> <span class="n">Robot</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Demonstrate various features.&quot;&quot;&quot;</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;======= SUBSCRIBE TO TOPICS =======&quot;</span><span class="p">)</span>
+    <span class="n">robot</span><span class="o">.</span><span class="n">subscribe</span><span class="p">(</span><span class="s2">&quot;grasping_state&quot;</span><span class="p">)</span>
+    <span class="n">robot</span><span class="o">.</span><span class="n">subscribe</span><span class="p">(</span><span class="s2">&quot;navigation_state&quot;</span><span class="p">)</span>
+    <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
+
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;======= START SCENARIO =======&quot;</span><span class="p">)</span>
+
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;----------- Wave and say hello -----------&quot;</span><span class="p">)</span>
+    <span class="n">waving</span> <span class="o">=</span> <span class="k">await</span> <span class="n">robot</span><span class="o">.</span><span class="n">wave</span><span class="p">()</span><span class="o">.</span><span class="n">started</span><span class="p">()</span>
+    <span class="k">await</span> <span class="n">robot</span><span class="o">.</span><span class="n">say</span><span class="p">(</span><span class="s2">&quot;Bonjour, je m&#39;appelle Miroki.&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">completed</span><span class="p">()</span>
+
+    <span class="k">await</span> <span class="n">waving</span><span class="o">.</span><span class="n">completed</span><span class="p">()</span>
+    <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;----------- Rotate 90° to the left -----------&quot;</span><span class="p">)</span>
+    <span class="k">await</span> <span class="n">robot</span><span class="o">.</span><span class="n">turn_left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span><span class="o">.</span><span class="n">completed</span><span class="p">()</span>
+
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;----------- Grasp handle with left arm -----------&quot;</span><span class="p">)</span>
+    <span class="n">grasping_handleB</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">grasp_handle</span><span class="p">(</span><span class="n">rune</span><span class="o">=</span><span class="n">EnchantedObject</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;handleB&quot;</span><span class="p">),</span> <span class="n">hand</span><span class="o">=</span><span class="n">Hand</span><span class="o">.</span><span class="n">LEFT</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">await</span> <span class="n">grasping_handleB</span><span class="o">.</span><span class="n">started</span><span class="p">()</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error while starting to grasp handleB: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">await</span> <span class="n">grasping_handleB</span><span class="o">.</span><span class="n">completed</span><span class="p">()</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error while grasping handleB: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;----------- Grasp handle with right arm directly -----------&quot;</span><span class="p">)</span>
+    <span class="n">grasping</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">take_object_in_front</span><span class="p">(</span><span class="n">hand</span><span class="o">=</span><span class="n">Hand</span><span class="o">.</span><span class="n">RIGHT</span><span class="p">)</span>
+    <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">await</span> <span class="n">grasping</span><span class="o">.</span><span class="n">cancel_and_complete</span><span class="p">()</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;----------- Rotate 90° on the right -----------&quot;</span><span class="p">)</span>
+    <span class="c1"># with list format, you need to send a list with [x, y, theta]</span>
+    <span class="k">await</span> <span class="n">robot</span><span class="o">.</span><span class="n">turn_right</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span><span class="o">.</span><span class="n">completed</span><span class="p">()</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;----------- Wait for the robot to start the move -----------&quot;</span><span class="p">)</span>
+    <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;----------- Wait until the move is over -----------&quot;</span><span class="p">)</span>
+
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;----------- Move forward (2m) -----------&quot;</span><span class="p">)</span>
+    <span class="k">await</span> <span class="n">robot</span><span class="o">.</span><span class="n">go_to_relative</span><span class="p">(</span><span class="n">Coordinates</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">2</span><span class="p">))</span><span class="o">.</span><span class="n">completed</span><span class="p">()</span>
+    <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;----------- Give the handle to the user -----------&quot;</span><span class="p">)</span>
+    <span class="k">await</span> <span class="n">robot</span><span class="o">.</span><span class="n">animate_arm</span><span class="p">(</span><span class="n">anim_name</span><span class="o">=</span><span class="s2">&quot;GIVE_HAND_NO_OPEN_HAND_BACK&quot;</span><span class="p">,</span> <span class="n">arm</span><span class="o">=</span><span class="n">Hand</span><span class="o">.</span><span class="n">RIGHT</span><span class="p">)</span><span class="o">.</span><span class="n">started</span><span class="p">()</span>
+
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;----------- Laugh and use TTS -----------&quot;</span><span class="p">)</span>
+    <span class="k">await</span> <span class="n">robot</span><span class="o">.</span><span class="n">say</span><span class="p">(</span><span class="s2">&quot;C&#39;est pour toi&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">completed</span><span class="p">()</span>
+
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;----------- Print values of subscribed topics -----------&quot;</span><span class="p">)</span>
+    <span class="n">robot</span><span class="o">.</span><span class="n">register_callback</span><span class="p">(</span><span class="s2">&quot;grasping_state&quot;</span><span class="p">,</span> <span class="nb">print</span><span class="p">)</span>
+    <span class="n">robot</span><span class="o">.</span><span class="n">register_callback</span><span class="p">(</span><span class="s2">&quot;navigation_state&quot;</span><span class="p">,</span> <span class="nb">print</span><span class="p">)</span>
+    <span class="n">robot</span><span class="o">.</span><span class="n">register_callback</span><span class="p">(</span><span class="s2">&quot;battery_voltage&quot;</span><span class="p">,</span> <span class="nb">print</span><span class="p">)</span>
+
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Main entry point for the script.&quot;&quot;&quot;</span>
+    <span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">(</span><span class="n">formatter_class</span><span class="o">=</span><span class="n">argparse</span><span class="o">.</span><span class="n">RawDescriptionHelpFormatter</span><span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+        <span class="s2">&quot;-i&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;--ip&quot;</span><span class="p">,</span>
+        <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Set the IP of the robot you want to connect.&quot;</span><span class="p">,</span>
+        <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span>
+        <span class="n">default</span><span class="o">=</span><span class="n">get_local_ip</span><span class="p">(),</span>
+    <span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+        <span class="s2">&quot;-k&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;--api-key&quot;</span><span class="p">,</span>
+        <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Set the API key of the robot you want to connect.&quot;</span><span class="p">,</span>
+        <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span>
+        <span class="n">default</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">args</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
+    <span class="k">await</span> <span class="n">run</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">ip</span><span class="p">,</span> <span class="n">args</span><span class="o">.</span><span class="n">api_key</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">run_until_interruption</span><span class="p">(</span><span class="n">main</span><span class="p">)</span>
+
+</pre></div>
+</div>
+<p>Note that <code class="docutils literal notranslate"><span class="pre">run_until_interruption</span></code> provided by <code class="docutils literal notranslate"><span class="pre">pymirokai</span></code> is very useful to start the coroutine and stop it when we send SIGINT or SIGTERM signals.</p>
+</section>
+</section>
+<section id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading"></a></h2>
+<p>This documentation provides an overview of the <code class="docutils literal notranslate"><span class="pre">Robot</span></code> class. By following the examples and guidelines provided, you can effectively control and interact with the robot using the <code class="docutils literal notranslate"><span class="pre">Robot</span></code> class. For</p>
+<p>more detailed information on specific methods and parameters, refer to the detailed pymirokai documentation and the API documentation.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title="Welcome to the Pymirokai Documentation !" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="robot.html" class="btn btn-neutral float-right" title="Robot" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright .</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

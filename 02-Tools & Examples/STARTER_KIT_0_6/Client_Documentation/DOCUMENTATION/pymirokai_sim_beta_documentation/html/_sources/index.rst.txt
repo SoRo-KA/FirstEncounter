@@ -1,0 +1,26 @@
+.. toctree::
+   :glob:
+   :maxdepth: 2
+   :caption: Contents:
+
+   files/getting_started.md
+   files/robot.rst
+   files/features.rst
+   files/skills_user.rst
+   files/skills_admin.rst
+   files/core.rst
+   files/enums.rst
+   files/models.rst
+   files/utils.rst
+
+
+Welcome to the Pymirokai Documentation !
+========================================
+
+Overview
+--------
+
+This documentation provides a comprehensive guide to using the Pymirokai API, which is designed to facilitate communication and control of a robot through REST and WebSocket APIs.
+The API integrates various functionalities such as interaction, navigation, behavior control, grasping, and more.
+
+Whether you are a developer looking to automate tasks or build sophisticated robotic applications, this API provides the necessary tools and interfaces.

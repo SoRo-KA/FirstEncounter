@@ -1,0 +1,11 @@
+Core Modules
+============
+.. automodule:: pymirokai.core.rest_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. automodule:: pymirokai.core.websocket_api
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,280 @@
+# Getting Started
+
+## Overview
+
+This documentation provides comprehensive information on how to use the `Robot` class. The `Robot` class integrates all features and handles operations, making it easier for developers to control and interact with the robot through REST and WebSocket APIs.
+
+## Table of Contents
+- [Getting Started](#getting-started)
+  - [Overview](#overview)
+  - [Table of Contents](#table-of-contents)
+  - [Introduction](#introduction)
+  - [Key Methods](#key-methods)
+  - [Robot Class Usage](#robot-class-usage)
+    - [Initialization](#initialization)
+    - [Connecting to the Robot](#connecting-to-the-robot)
+    - [Disconnecting from the Robot](#disconnecting-from-the-robot)
+    - [Sending Commands](#sending-commands)
+      - [Example Commands](#example-commands)
+      - [Mission Interface](#mission-interface)
+    - [Subscribing to Topics](#subscribing-to-topics)
+    - [Registering Callbacks](#registering-callbacks)
+    - [Example Usage](#example-usage)
+  - [Conclusion](#conclusion)
+
+## Introduction
+
+The `Robot` class is designed to facilitate communication and control of a robot through REST and WebSocket APIs. This class encapsulates various features such as interaction, navigation, behavior control, grasping, and more, making it a powerful tool for robot management and automation.
+
+## Key Methods
+- `connect(ip: str, api_key: str) -> BaseRobot.Connection`: Connects to the WebSocket and REST server.
+- `subscribe(topic: str)`: Subscribes to a WebSocket topic.
+- `unsubscribe(topic: str)`: Unsubscribes from a WebSocket topic.
+- `publish(topic: str, data: str)`: Publishes data to a WebSocket topic.
+- `register_callback(topic: str, callback: Callable[[dict], None])`: Registers a callback function for a WebSocket topic.
+
+## Robot Class Usage
+
+### Initialization
+
+To use the `Robot` class, you need to initialize it.
+
+```python
+from pymirokai.robot import Robot
+
+robot = Robot()
+```
+
+Alternatively, you can have a robot object already connected with automatic disconnection at the end of a scope:
+
+```python
+from pymirokai.robot import connect
+
+async with connect(robot_ip, api_key) as robot:
+    # Example of code using the connected robot object
+    await robot.say("Hello world").completed()
+# When the scope is finished, the robot object is disconnected
+```
+
+### Connecting to the Robot
+
+To connect to a robot with the appropriate API URLs and configuration parameters, use the `connect` function.
+
+```python
+connection = robot.connect(robot_ip, api_key)
+```
+
+To wait for the connection to finish, you can do:
+
+```python
+await connection.connected()
+```
+
+### Disconnecting from the Robot
+
+To disconnect from the robot and wait for the disconnection to be finished, use the `cancel_and_complete()` method on the `connection` object returned by `robot.connect`.
+
+```python
+await connection.cancel_and_complete()
+```
+
+### Sending Commands
+
+The `Robot` class provides various methods to send commands to the robot. These methods return a `Mission` object that allows you to wait for the command to be started on the robot and to wait for the command to be finished. The `Mission` object also allows you to cancel the command.
+
+#### Example Commands
+
+Some commands return a `Mission` object:
+
+```python
+mission = robot.go_to_relative(Coordinates(x=1.0, y=2.0, theta=0.0))
+mission = robot.say("Hello, world!")
+```
+
+Some commands are simply getters/setters on the robot:
+
+```python
+response = robot.get_detected_runes()
+response = robot.set_sound_level(50)
+response = robot.set_robot_max_velocity(50)
+```
+
+#### Mission Interface
+
+To wait for a mission to be started:
+
+```python
+await mission.started()
+```
+
+To wait for a mission to be finished:
+
+```python
+await mission.completed()
+```
+
+Note that both previous commands raise exceptions when an error occurs or when the mission has been cancelled.
+
+To wait for a mission to be finished without being bothered by exceptions, use `completed_ignoring_exception`:
+
+```python
+await mission.completed_ignoring_exception()
+```
+
+To cancel a mission:
+
+```python
+await mission.cancel()
+```
+
+To cancel and wait for the mission to be finished:
+
+```python
+await mission.cancel_and_complete()
+```
+
+### Subscribing to Topics
+
+To subscribe to WebSocket topics, use the `subscribe` method.
+
+```python
+robot.subscribe("grasping_state")
+robot.subscribe("navigation_state")
+robot.subscribe("battery_voltage")
+```
+
+### Registering Callbacks
+
+You can register callback functions to handle messages received from specific topics.
+
+```python
+def handle_grasping_state(message: dict) -> None:
+    print(f"Grasping State: {message}")
+
+def handle_navigation_state(message: dict) -> None:
+    print(f"Navigation State: {message}")
+
+def handle_battery_voltage(message: dict) -> None:
+    print(f"Battery Voltage: {message}")
+
+robot.register_callback("grasping_state", handle_grasping_state)
+robot.register_callback("navigation_state", handle_navigation_state)
+robot.register_callback("battery_voltage", handle_battery_voltage)
+```
+
+### Example Usage
+
+Here is an example script that you can launch on the robot:
+
+```python
+"""Example file to test robot abilities."""
+
+import argparse
+import asyncio
+import logging
+from pymirokai.enums import Hand
+from pymirokai.models.data_models import EnchantedObject, Coordinates
+from pymirokai.robot import connect, Robot
+from pymirokai.utils.get_local_ip import get_local_ip
+from pymirokai.utils.run_until_interruption import run_until_interruption
+
+logger = logging.getLogger("pymirokai")
+
+
+async def run(ip: str, api_key: str) -> None:
+    """Run the robot, demonstrating various features."""
+    async with connect(ip, api_key) as robot:
+        await robot_behavior(robot)
+        await asyncio.Future()  # Wait indefinitely
+
+
+async def robot_behavior(robot: Robot) -> None:
+    """Demonstrate various features."""
+    logger.info("======= SUBSCRIBE TO TOPICS =======")
+    robot.subscribe("grasping_state")
+    robot.subscribe("navigation_state")
+    await asyncio.sleep(0.5)
+
+    logger.info("======= START SCENARIO =======")
+
+    logger.info("----------- Wave and say hello -----------")
+    waving = await robot.wave().started()
+    await robot.say("Bonjour, je m'appelle Miroki.").completed()
+
+    await waving.completed()
+    await asyncio.sleep(1)
+
+    logger.info("----------- Rotate 90° to the left -----------")
+    await robot.turn_left(90).completed()
+
+    logger.info("----------- Grasp handle with left arm -----------")
+    grasping_handleB = robot.grasp_handle(rune=EnchantedObject(id="handleB"), hand=Hand.LEFT)
+    try:
+        await grasping_handleB.started()
+    except Exception as e:
+        logger.error(f"Error while starting to grasp handleB: {e}")
+    try:
+        await grasping_handleB.completed()
+    except Exception as e:
+        logger.error(f"Error while grasping handleB: {e}")
+
+    logger.info("----------- Grasp handle with right arm directly -----------")
+    grasping = robot.take_object_in_front(hand=Hand.RIGHT)
+    await asyncio.sleep(2)
+    await grasping.cancel_and_complete()
+    logger.info("----------- Rotate 90° on the right -----------")
+    # with list format, you need to send a list with [x, y, theta]
+    await robot.turn_right(90).completed()
+    logger.info("----------- Wait for the robot to start the move -----------")
+    await asyncio.sleep(1)
+    logger.info("----------- Wait until the move is over -----------")
+
+    logger.info("----------- Move forward (2m) -----------")
+    await robot.go_to_relative(Coordinates(x=2)).completed()
+    await asyncio.sleep(1)
+
+    logger.info("----------- Give the handle to the user -----------")
+    await robot.animate_arm(anim_name="GIVE_HAND_NO_OPEN_HAND_BACK", arm=Hand.RIGHT).started()
+
+    logger.info("----------- Laugh and use TTS -----------")
+    await robot.say("C'est pour toi").completed()
+
+    logger.info("----------- Print values of subscribed topics -----------")
+    robot.register_callback("grasping_state", print)
+    robot.register_callback("navigation_state", print)
+    robot.register_callback("battery_voltage", print)
+
+
+async def main() -> None:
+    """Main entry point for the script."""
+    parser = argparse.ArgumentParser(formatter_class=argparse.RawDescriptionHelpFormatter)
+    parser.add_argument(
+        "-i",
+        "--ip",
+        help="Set the IP of the robot you want to connect.",
+        type=str,
+        default=get_local_ip(),
+    )
+    parser.add_argument(
+        "-k",
+        "--api-key",
+        help="Set the API key of the robot you want to connect.",
+        type=str,
+        default="",
+    )
+    args = parser.parse_args()
+    await run(args.ip, args.api_key)
+
+
+if __name__ == "__main__":
+    run_until_interruption(main)
+
+```
+
+Note that `run_until_interruption` provided by `pymirokai` is very useful to start the coroutine and stop it when we send SIGINT or SIGTERM signals.
+
+## Conclusion
+
+This documentation provides an overview of the `Robot` class. By following the examples and guidelines provided, you can effectively control and interact with the robot using the `Robot` class. For
+
+ more detailed information on specific methods and parameters, refer to the detailed pymirokai documentation and the API documentation.

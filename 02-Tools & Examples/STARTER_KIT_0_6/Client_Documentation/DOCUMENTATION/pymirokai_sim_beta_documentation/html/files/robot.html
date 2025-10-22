@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Robot &mdash; Python  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Features" href="features.html" />
+    <link rel="prev" title="Getting Started" href="getting_started.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Python
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Robot</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#pymirokai.robot.BaseRobot"><code class="docutils literal notranslate"><span class="pre">BaseRobot</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.robot.BaseRobot.retry_interval"><code class="docutils literal notranslate"><span class="pre">BaseRobot.retry_interval</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.robot.BaseRobot.rest_api"><code class="docutils literal notranslate"><span class="pre">BaseRobot.rest_api</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.robot.BaseRobot.websocket_api"><code class="docutils literal notranslate"><span class="pre">BaseRobot.websocket_api</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.robot.BaseRobot.running"><code class="docutils literal notranslate"><span class="pre">BaseRobot.running</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.robot.BaseRobot.loop"><code class="docutils literal notranslate"><span class="pre">BaseRobot.loop</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.robot.BaseRobot.thread"><code class="docutils literal notranslate"><span class="pre">BaseRobot.thread</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.robot.BaseRobot.connection"><code class="docutils literal notranslate"><span class="pre">BaseRobot.connection</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.robot.BaseRobot.Connection"><code class="docutils literal notranslate"><span class="pre">BaseRobot.Connection</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pymirokai.robot.BaseRobot.Connection.robot"><code class="docutils literal notranslate"><span class="pre">BaseRobot.Connection.robot</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pymirokai.robot.BaseRobot.Connection.rest_api_url"><code class="docutils literal notranslate"><span class="pre">BaseRobot.Connection.rest_api_url</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pymirokai.robot.BaseRobot.Connection.websocket_api_url"><code class="docutils literal notranslate"><span class="pre">BaseRobot.Connection.websocket_api_url</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pymirokai.robot.BaseRobot.Connection.rest_api"><code class="docutils literal notranslate"><span class="pre">BaseRobot.Connection.rest_api</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pymirokai.robot.BaseRobot.Connection.websocket_api"><code class="docutils literal notranslate"><span class="pre">BaseRobot.Connection.websocket_api</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pymirokai.robot.BaseRobot.Connection.finished"><code class="docutils literal notranslate"><span class="pre">BaseRobot.Connection.finished</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pymirokai.robot.BaseRobot.Connection.cancel"><code class="docutils literal notranslate"><span class="pre">BaseRobot.Connection.cancel()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pymirokai.robot.BaseRobot.Connection.cancel_and_complete"><code class="docutils literal notranslate"><span class="pre">BaseRobot.Connection.cancel_and_complete()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pymirokai.robot.BaseRobot.Connection.completed"><code class="docutils literal notranslate"><span class="pre">BaseRobot.Connection.completed()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pymirokai.robot.BaseRobot.Connection.connected"><code class="docutils literal notranslate"><span class="pre">BaseRobot.Connection.connected()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pymirokai.robot.BaseRobot.Connection.get_jwt_token"><code class="docutils literal notranslate"><span class="pre">BaseRobot.Connection.get_jwt_token()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pymirokai.robot.BaseRobot.Connection.run"><code class="docutils literal notranslate"><span class="pre">BaseRobot.Connection.run()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pymirokai.robot.BaseRobot.Connection.run_without_cancelled_error"><code class="docutils literal notranslate"><span class="pre">BaseRobot.Connection.run_without_cancelled_error()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pymirokai.robot.BaseRobot.Connection.set_jwt_token"><code class="docutils literal notranslate"><span class="pre">BaseRobot.Connection.set_jwt_token()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.robot.BaseRobot.cancel_and_wait_for_mission"><code class="docutils literal notranslate"><span class="pre">BaseRobot.cancel_and_wait_for_mission()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.robot.BaseRobot.cancel_client_missions"><code class="docutils literal notranslate"><span class="pre">BaseRobot.cancel_client_missions()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.robot.BaseRobot.cancel_skill"><code class="docutils literal notranslate"><span class="pre">BaseRobot.cancel_skill()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.robot.BaseRobot.connect"><code class="docutils literal notranslate"><span class="pre">BaseRobot.connect()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.robot.BaseRobot.get_data"><code class="docutils literal notranslate"><span class="pre">BaseRobot.get_data()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.robot.BaseRobot.get_service_log"><code class="docutils literal notranslate"><span class="pre">BaseRobot.get_service_log()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.robot.BaseRobot.get_services_list"><code class="docutils literal notranslate"><span class="pre">BaseRobot.get_services_list()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.robot.BaseRobot.get_skills"><code class="docutils literal notranslate"><span class="pre">BaseRobot.get_skills()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.robot.BaseRobot.publish"><code class="docutils literal notranslate"><span class="pre">BaseRobot.publish()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.robot.BaseRobot.register_callback"><code class="docutils literal notranslate"><span class="pre">BaseRobot.register_callback()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.robot.BaseRobot.send_boolean"><code class="docutils literal notranslate"><span class="pre">BaseRobot.send_boolean()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.robot.BaseRobot.send_command"><code class="docutils literal notranslate"><span class="pre">BaseRobot.send_command()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.robot.BaseRobot.send_dict"><code class="docutils literal notranslate"><span class="pre">BaseRobot.send_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.robot.BaseRobot.send_float"><code class="docutils literal notranslate"><span class="pre">BaseRobot.send_float()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.robot.BaseRobot.send_int"><code class="docutils literal notranslate"><span class="pre">BaseRobot.send_int()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.robot.BaseRobot.send_int_async"><code class="docutils literal notranslate"><span class="pre">BaseRobot.send_int_async()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.robot.BaseRobot.send_list"><code class="docutils literal notranslate"><span class="pre">BaseRobot.send_list()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.robot.BaseRobot.send_string"><code class="docutils literal notranslate"><span class="pre">BaseRobot.send_string()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.robot.BaseRobot.skill"><code class="docutils literal notranslate"><span class="pre">BaseRobot.skill()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.robot.BaseRobot.skills_activation"><code class="docutils literal notranslate"><span class="pre">BaseRobot.skills_activation()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.robot.BaseRobot.subscribe"><code class="docutils literal notranslate"><span class="pre">BaseRobot.subscribe()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.robot.BaseRobot.unsubscribe"><code class="docutils literal notranslate"><span class="pre">BaseRobot.unsubscribe()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.robot.BaseRobot.wait_for_skill"><code class="docutils literal notranslate"><span class="pre">BaseRobot.wait_for_skill()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.robot.BaseRobot.wait_for_skill_started"><code class="docutils literal notranslate"><span class="pre">BaseRobot.wait_for_skill_started()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#pymirokai.robot.Robot"><code class="docutils literal notranslate"><span class="pre">Robot</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pymirokai.robot.connect"><code class="docutils literal notranslate"><span class="pre">connect()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pymirokai.robot.initialize_coloredlogs"><code class="docutils literal notranslate"><span class="pre">initialize_coloredlogs()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="skills_user.html">Skills (User)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="skills_admin.html">Skills (Admin)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="core.html">Core Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="enums.html">Enums</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models.html">Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utils.html">Utils</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Python</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Robot</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/files/robot.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-pymirokai.robot">
+<span id="robot"></span><h1>Robot<a class="headerlink" href="#module-pymirokai.robot" title="Link to this heading"></a></h1>
+<p>This module contains the Robot class which integrates all features and handles operations.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="pymirokai.robot.BaseRobot">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pymirokai.robot.</span></span><span class="sig-name descname"><span class="pre">BaseRobot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">retry_interval</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">api_version</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'v1'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loglevel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'INFO'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.robot.BaseRobot" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Base class for the robot, handling the integration of various features and API interactions.</p>
+<p>This class manages the connection to both REST and WebSocket APIs, allowing for the execution of skills
+and management of robot features.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>retry_interval</strong> (<em>int</em>)</p></li>
+<li><p><strong>api_version</strong> (<em>str</em>)</p></li>
+<li><p><strong>loglevel</strong> (<em>str</em>)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.robot.BaseRobot.retry_interval">
+<span class="sig-name descname"><span class="pre">retry_interval</span></span><a class="headerlink" href="#pymirokai.robot.BaseRobot.retry_interval" title="Link to this definition"></a></dt>
+<dd><p>Interval between connection retry attempts.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.robot.BaseRobot.rest_api">
+<span class="sig-name descname"><span class="pre">rest_api</span></span><a class="headerlink" href="#pymirokai.robot.BaseRobot.rest_api" title="Link to this definition"></a></dt>
+<dd><p>Instance for REST API communication.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="core.html#pymirokai.core.rest_api.RestAPI" title="pymirokai.core.rest_api.RestAPI">RestAPI</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.robot.BaseRobot.websocket_api">
+<span class="sig-name descname"><span class="pre">websocket_api</span></span><a class="headerlink" href="#pymirokai.robot.BaseRobot.websocket_api" title="Link to this definition"></a></dt>
+<dd><p>Instance for WebSocket API communication.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="core.html#pymirokai.core.websocket_api.WebSocketAPI" title="pymirokai.core.websocket_api.WebSocketAPI">WebSocketAPI</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.robot.BaseRobot.running">
+<span class="sig-name descname"><span class="pre">running</span></span><a class="headerlink" href="#pymirokai.robot.BaseRobot.running" title="Link to this definition"></a></dt>
+<dd><p>Event to control the running state of the robot.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>asyncio.Event</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.robot.BaseRobot.loop">
+<span class="sig-name descname"><span class="pre">loop</span></span><a class="headerlink" href="#pymirokai.robot.BaseRobot.loop" title="Link to this definition"></a></dt>
+<dd><p>Event loop for asynchronous operations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Optional[asyncio.AbstractEventLoop]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.robot.BaseRobot.thread">
+<span class="sig-name descname"><span class="pre">thread</span></span><a class="headerlink" href="#pymirokai.robot.BaseRobot.thread" title="Link to this definition"></a></dt>
+<dd><p>Thread for running asynchronous tasks.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Optional[threading.Thread]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.robot.BaseRobot.connection">
+<span class="sig-name descname"><span class="pre">connection</span></span><a class="headerlink" href="#pymirokai.robot.BaseRobot.connection" title="Link to this definition"></a></dt>
+<dd><p>Manages the connection state and operations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Optional[<a class="reference internal" href="#pymirokai.robot.BaseRobot.Connection" title="pymirokai.robot.BaseRobot.Connection">BaseRobot.Connection</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pymirokai.robot.BaseRobot.Connection">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Connection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">robot</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rest_api_url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">websocket_api_url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">api_key</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.robot.BaseRobot.Connection" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Handles the robot’s connection to the REST and WebSocket APIs.</p>
+<p>Manages the start, stop, and monitoring of connections to the robot’s APIs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>robot</strong> (<a class="reference internal" href="#pymirokai.robot.BaseRobot" title="pymirokai.robot.BaseRobot"><em>BaseRobot</em></a>)</p></li>
+<li><p><strong>rest_api_url</strong> (<em>str</em>)</p></li>
+<li><p><strong>websocket_api_url</strong> (<em>str</em>)</p></li>
+<li><p><strong>api_key</strong> (<em>str</em>)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.robot.BaseRobot.Connection.robot">
+<span class="sig-name descname"><span class="pre">robot</span></span><a class="headerlink" href="#pymirokai.robot.BaseRobot.Connection.robot" title="Link to this definition"></a></dt>
+<dd><p>The parent robot instance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#pymirokai.robot.BaseRobot" title="pymirokai.robot.BaseRobot">BaseRobot</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.robot.BaseRobot.Connection.rest_api_url">
+<span class="sig-name descname"><span class="pre">rest_api_url</span></span><a class="headerlink" href="#pymirokai.robot.BaseRobot.Connection.rest_api_url" title="Link to this definition"></a></dt>
+<dd><p>URL for the REST API.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.robot.BaseRobot.Connection.websocket_api_url">
+<span class="sig-name descname"><span class="pre">websocket_api_url</span></span><a class="headerlink" href="#pymirokai.robot.BaseRobot.Connection.websocket_api_url" title="Link to this definition"></a></dt>
+<dd><p>URL for the WebSocket API.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.robot.BaseRobot.Connection.rest_api">
+<span class="sig-name descname"><span class="pre">rest_api</span></span><a class="headerlink" href="#pymirokai.robot.BaseRobot.Connection.rest_api" title="Link to this definition"></a></dt>
+<dd><p>Task for managing REST API connection.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Optional[asyncio.Task]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.robot.BaseRobot.Connection.websocket_api">
+<span class="sig-name descname"><span class="pre">websocket_api</span></span><a class="headerlink" href="#pymirokai.robot.BaseRobot.Connection.websocket_api" title="Link to this definition"></a></dt>
+<dd><p>Task for managing WebSocket API connection.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Optional[asyncio.Task]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.robot.BaseRobot.Connection.finished">
+<span class="sig-name descname"><span class="pre">finished</span></span><a class="headerlink" href="#pymirokai.robot.BaseRobot.Connection.finished" title="Link to this definition"></a></dt>
+<dd><p>Future indicating the completion of connection tasks.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>asyncio.Future</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pymirokai.robot.BaseRobot.Connection.cancel">
+<span class="sig-name descname"><span class="pre">cancel</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.robot.BaseRobot.Connection.cancel" title="Link to this definition"></a></dt>
+<dd><p>Cancel the connection tasks and stop monitoring APIs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pymirokai.robot.BaseRobot.Connection.cancel_and_complete">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">cancel_and_complete</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.robot.BaseRobot.Connection.cancel_and_complete" title="Link to this definition"></a></dt>
+<dd><p>Cancel the connection tasks and ensure completion.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pymirokai.robot.BaseRobot.Connection.completed">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">completed</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.robot.BaseRobot.Connection.completed" title="Link to this definition"></a></dt>
+<dd><p>Wait for the completion of all connection tasks.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pymirokai.robot.BaseRobot.Connection.connected">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">connected</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.robot.BaseRobot.Connection.connected" title="Link to this definition"></a></dt>
+<dd><p>Wait for the robot to connect to both REST and WebSocket APIs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#pymirokai.robot.BaseRobot.Connection" title="pymirokai.robot.BaseRobot.Connection"><code class="xref py py-class docutils literal notranslate"><span class="pre">Connection</span></code></a></span></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>BaseRobot.Connection</em> – The connection instance, indicating successful connection.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pymirokai.robot.BaseRobot.Connection.get_jwt_token">
+<span class="sig-name descname"><span class="pre">get_jwt_token</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.robot.BaseRobot.Connection.get_jwt_token" title="Link to this definition"></a></dt>
+<dd><p>Retrieve the latest JWT token.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pymirokai.robot.BaseRobot.Connection.run">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.robot.BaseRobot.Connection.run" title="Link to this definition"></a></dt>
+<dd><p>Start monitoring and managing data fetching from the APIs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pymirokai.robot.BaseRobot.Connection.run_without_cancelled_error">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">run_without_cancelled_error</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.robot.BaseRobot.Connection.run_without_cancelled_error" title="Link to this definition"></a></dt>
+<dd><p>Run the connection tasks, handling cancellation errors gracefully.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pymirokai.robot.BaseRobot.Connection.set_jwt_token">
+<span class="sig-name descname"><span class="pre">set_jwt_token</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.robot.BaseRobot.Connection.set_jwt_token" title="Link to this definition"></a></dt>
+<dd><p>Update the shared JWT token.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>token</strong> (<em>str</em>)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pymirokai.robot.BaseRobot.cancel_and_wait_for_mission">
+<span class="sig-name descname"><span class="pre">cancel_and_wait_for_mission</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id_mission</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.robot.BaseRobot.cancel_and_wait_for_mission" title="Link to this definition"></a></dt>
+<dd><p>Cancel a mission and wait for its completion.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>id_mission</strong> (<em>str</em>) – The mission ID to cancel.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code>]</span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>Dict[str, Any]</em> – The response from the REST API indicating whether the mission was cancelled.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pymirokai.robot.BaseRobot.cancel_client_missions">
+<span class="sig-name descname"><span class="pre">cancel_client_missions</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.robot.BaseRobot.cancel_client_missions" title="Link to this definition"></a></dt>
+<dd><p>Cancel a mission and wait for its completion.
+:rtype: <span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code>]</span>
+:returns: <em>Dict[str, Any]</em> – The response from the REST API indicating whether the mission was cancelled.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>Dict</em>[str, <em>Any</em>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pymirokai.robot.BaseRobot.cancel_skill">
+<span class="sig-name descname"><span class="pre">cancel_skill</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id_mission</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.robot.BaseRobot.cancel_skill" title="Link to this definition"></a></dt>
+<dd><p>Cancel a specific skill.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>id_mission</strong> (<em>str</em>) – The mission ID to cancel.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code>]</span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>Dict[str, Any]</em> – The response from the REST API indicating whether the mission was cancelled.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pymirokai.robot.BaseRobot.connect">
+<span class="sig-name descname"><span class="pre">connect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ip</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">api_key</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.robot.BaseRobot.connect" title="Link to this definition"></a></dt>
+<dd><p>Initiate the connection to the robot’s APIs.</p>
+<p>Starts monitoring and fetching data from the REST and WebSocket APIs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ip</strong> (<em>str</em>) – Ip of the robot.</p></li>
+<li><p><strong>api_key</strong> (<em>str</em>) – API key of the robot</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#pymirokai.robot.BaseRobot.Connection" title="pymirokai.robot.BaseRobot.Connection"><code class="xref py py-class docutils literal notranslate"><span class="pre">Connection</span></code></a></span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>BaseRobot.Connection</em> – The connection instance managing the APIs.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pymirokai.robot.BaseRobot.get_data">
+<span class="sig-name descname"><span class="pre">get_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.robot.BaseRobot.get_data" title="Link to this definition"></a></dt>
+<dd><p>Get the latest data from the WebSocket.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code>]</span></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>Dict[str, Any]</em> – The latest data received from the WebSocket.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pymirokai.robot.BaseRobot.get_service_log">
+<span class="sig-name descname"><span class="pre">get_service_log</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">system</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">service</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.robot.BaseRobot.get_service_log" title="Link to this definition"></a></dt>
+<dd><p>Get logs for a specific service.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>system</strong> (<em>str</em>) – The system to get the service logs from (e.g., ‘head’, ‘base’).</p></li>
+<li><p><strong>service</strong> (<em>str</em>) – The service name.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code>]</span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>Dict[str, Any]</em> – The logs from the specified service.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pymirokai.robot.BaseRobot.get_services_list">
+<span class="sig-name descname"><span class="pre">get_services_list</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.robot.BaseRobot.get_services_list" title="Link to this definition"></a></dt>
+<dd><p>Get the list of available services for logs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code>]</span></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>Dict[str, Any]</em> – The list of available services.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pymirokai.robot.BaseRobot.get_skills">
+<span class="sig-name descname"><span class="pre">get_skills</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.robot.BaseRobot.get_skills" title="Link to this definition"></a></dt>
+<dd><p>Get the list of available skills.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code>]</span></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>Dict[str, Any]</em> – The response from the REST API.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pymirokai.robot.BaseRobot.publish">
+<span class="sig-name descname"><span class="pre">publish</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">topic</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.robot.BaseRobot.publish" title="Link to this definition"></a></dt>
+<dd><p>Publish data to a WebSocket topic.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>topic</strong> (<em>str</em>) – The topic to publish to.</p></li>
+<li><p><strong>data</strong> (<em>str</em>) – The data to publish (JSON format).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pymirokai.robot.BaseRobot.register_callback">
+<span class="sig-name descname"><span class="pre">register_callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">topic</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.robot.BaseRobot.register_callback" title="Link to this definition"></a></dt>
+<dd><p>Register a callback function for a WebSocket topic.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>topic</strong> (<em>str</em>) – The topic to register the callback for.</p></li>
+<li><p><strong>callback</strong> (<em>Callable</em><em>[</em><em>[</em><em>Dict</em><em>[</em><em>str</em><em>, </em><em>Any</em><em>]</em><em>]</em><em>, </em><em>None</em><em>]</em>) – The callback function to call when a</p></li>
+<li><p><strong>topic.</strong> (<em>message is received for the</em>)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pymirokai.robot.BaseRobot.send_boolean">
+<span class="sig-name descname"><span class="pre">send_boolean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">command</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.robot.BaseRobot.send_boolean" title="Link to this definition"></a></dt>
+<dd><p>Send a boolean command to the robot.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>command</strong> (<em>str</em>) – The command to send.</p></li>
+<li><p><strong>value</strong> (<em>bool</em>) – The boolean data.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code>]</span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>Dict[str, Any]</em> – The response from the REST API.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pymirokai.robot.BaseRobot.send_command">
+<span class="sig-name descname"><span class="pre">send_command</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">command</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.robot.BaseRobot.send_command" title="Link to this definition"></a></dt>
+<dd><p>Send a simple command with no arguments to the robot.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>command</strong> (<em>str</em>) – The command to send.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code>]</span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>Dict[str, Any]</em> – The response from the REST API.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pymirokai.robot.BaseRobot.send_dict">
+<span class="sig-name descname"><span class="pre">send_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">command</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.robot.BaseRobot.send_dict" title="Link to this definition"></a></dt>
+<dd><p>Send a dictionary command to the robot.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>command</strong> (<em>str</em>) – The command to send.</p></li>
+<li><p><strong>value</strong> (<em>Dict</em><em>[</em><em>str</em><em>, </em><em>Any</em><em>]</em>) – The dictionary data.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code>]</span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>Dict[str, Any]</em> – The response from the REST API.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pymirokai.robot.BaseRobot.send_float">
+<span class="sig-name descname"><span class="pre">send_float</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">command</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.robot.BaseRobot.send_float" title="Link to this definition"></a></dt>
+<dd><p>Send a float command to the robot.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>command</strong> (<em>str</em>) – The command to send.</p></li>
+<li><p><strong>value</strong> (<em>float</em>) – The float data.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code>]</span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>Dict[str, Any]</em> – The response from the REST API.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pymirokai.robot.BaseRobot.send_int">
+<span class="sig-name descname"><span class="pre">send_int</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">command</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.robot.BaseRobot.send_int" title="Link to this definition"></a></dt>
+<dd><p>Send an integer command to the robot.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>command</strong> (<em>str</em>) – The command to send.</p></li>
+<li><p><strong>value</strong> (<em>int</em>) – The integer data to send.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code>]</span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>Dict[str, Any]</em> – The response from the REST API.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pymirokai.robot.BaseRobot.send_int_async">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">send_int_async</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">command</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.robot.BaseRobot.send_int_async" title="Link to this definition"></a></dt>
+<dd><p>Send an integer command to the robot asynchronously.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>command</strong> (<em>str</em>) – The command to send.</p></li>
+<li><p><strong>value</strong> (<em>int</em>) – The integer data to send.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code>]</span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>Dict[str, Any]</em> – The response from the REST API.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pymirokai.robot.BaseRobot.send_list">
+<span class="sig-name descname"><span class="pre">send_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">command</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.robot.BaseRobot.send_list" title="Link to this definition"></a></dt>
+<dd><p>Send a list command to the robot.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>command</strong> (<em>str</em>) – The command to send.</p></li>
+<li><p><strong>value</strong> (<em>list</em><em>[</em><em>Any</em><em>]</em>) – The list data.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code>]</span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>Dict[str, Any]</em> – The response from the REST API.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pymirokai.robot.BaseRobot.send_string">
+<span class="sig-name descname"><span class="pre">send_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">command</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.robot.BaseRobot.send_string" title="Link to this definition"></a></dt>
+<dd><p>Send a string command to the robot.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>command</strong> (<em>str</em>) – The command to send.</p></li>
+<li><p><strong>value</strong> (<em>str</em>) – The string data.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code>]</span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>Dict[str, Any]</em> – The response from the REST API.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pymirokai.robot.BaseRobot.skill">
+<span class="sig-name descname"><span class="pre">skill</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">skill</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.robot.BaseRobot.skill" title="Link to this definition"></a></dt>
+<dd><p>Trigger a skill on the robot.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>skill</strong> (<em>str</em>) – The name of the skill to trigger.</p></li>
+<li><p><strong>**kwargs</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></span>) – Additional arguments for the skill.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code>]</span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>Dict[str, Any]</em> – The response from the REST API containing the command and mission ID.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pymirokai.robot.BaseRobot.skills_activation">
+<span class="sig-name descname"><span class="pre">skills_activation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">activate</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.robot.BaseRobot.skills_activation" title="Link to this definition"></a></dt>
+<dd><p>Activate or deactivate skills.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>activate</strong> (<em>bool</em>) – Whether to activate (True) or deactivate (False) skills.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code>]</span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>Dict[str, Any]</em> – The response from the REST API.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pymirokai.robot.BaseRobot.subscribe">
+<span class="sig-name descname"><span class="pre">subscribe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">topic</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.robot.BaseRobot.subscribe" title="Link to this definition"></a></dt>
+<dd><p>Subscribe to a WebSocket topic.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>topic</strong> (<em>str</em>) – The topic to subscribe to.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pymirokai.robot.BaseRobot.unsubscribe">
+<span class="sig-name descname"><span class="pre">unsubscribe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">topic</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.robot.BaseRobot.unsubscribe" title="Link to this definition"></a></dt>
+<dd><p>Unsubscribe from a WebSocket topic.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>topic</strong> (<em>str</em>) – The topic to unsubscribe from.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pymirokai.robot.BaseRobot.wait_for_skill">
+<span class="sig-name descname"><span class="pre">wait_for_skill</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id_mission</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.robot.BaseRobot.wait_for_skill" title="Link to this definition"></a></dt>
+<dd><p>Wait for a specific skill to complete.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>id_mission</strong> (<em>str</em>) – The mission ID to wait for.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code>]</span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>Dict[str, Any]</em> – The response from the REST API indicating whether the mission was awaited.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pymirokai.robot.BaseRobot.wait_for_skill_started">
+<span class="sig-name descname"><span class="pre">wait_for_skill_started</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id_mission</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.robot.BaseRobot.wait_for_skill_started" title="Link to this definition"></a></dt>
+<dd><p>Wait for a skill to start.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>id_mission</strong> (<em>str</em>) – The mission ID to wait for.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code>]</span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>Dict[str, Any]</em> – The response from the REST API indicating whether the mission was started.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pymirokai.robot.Robot">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pymirokai.robot.</span></span><span class="sig-name descname"><span class="pre">Robot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">retry_interval</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">api_version</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'v1'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loglevel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'INFO'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.robot.Robot" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pymirokai.robot.BaseRobot" title="pymirokai.robot.BaseRobot"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseRobot</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Animate</span></code>, <a class="reference internal" href="features.html#pymirokai.features.abilities.behavior.Behavior" title="pymirokai.features.abilities.behavior.Behavior"><code class="xref py py-class docutils literal notranslate"><span class="pre">Behavior</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Freeze</span></code>, <a class="reference internal" href="features.html#pymirokai.features.abilities.generic.Generic" title="pymirokai.features.abilities.generic.Generic"><code class="xref py py-class docutils literal notranslate"><span class="pre">Generic</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Interact</span></code>, <a class="reference internal" href="features.html#pymirokai.features.abilities.interaction.Interaction" title="pymirokai.features.abilities.interaction.Interaction"><code class="xref py py-class docutils literal notranslate"><span class="pre">Interaction</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Manipulate</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Navigate</span></code>, <a class="reference internal" href="features.html#pymirokai.features.abilities.navigation.Navigation" title="pymirokai.features.abilities.navigation.Navigation"><code class="xref py py-class docutils literal notranslate"><span class="pre">Navigation</span></code></a>, <a class="reference internal" href="features.html#pymirokai.features.abilities.runes.Runes" title="pymirokai.features.abilities.runes.Runes"><code class="xref py py-class docutils literal notranslate"><span class="pre">Runes</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ShowOff</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">System</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Transport</span></code></p>
+<p>Robot class that integrates all features and skills.</p>
+<p>This class extends BaseRobot and includes abilities and skills such as animation, behavior, interaction,
+manipulation, navigation, runes, and more, providing a comprehensive interface for interacting with
+the robot.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>retry_interval</strong> (<em>int</em>) – Time interval between retry attempts for API connections.</p></li>
+<li><p><strong>api_version</strong> (<em>str</em>) – API version to use for communication.</p></li>
+<li><p><strong>loglevel</strong> (<em>str</em>) – The level of logging detail.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pymirokai.robot.connect">
+<span class="sig-prename descclassname"><span class="pre">pymirokai.robot.</span></span><span class="sig-name descname"><span class="pre">connect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ip</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">api_key</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.robot.connect" title="Link to this definition"></a></dt>
+<dd><p>Initiate the connection to the robot’s APIs.</p>
+<p>Starts monitoring and fetching data from the REST and WebSocket APIs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ip</strong> (<em>str</em>) – Ip of the robot.</p></li>
+<li><p><strong>api_key</strong> (<em>str</em>) – API key of the robot</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#pymirokai.robot.BaseRobot.Connection" title="pymirokai.robot.BaseRobot.Connection"><code class="xref py py-class docutils literal notranslate"><span class="pre">Connection</span></code></a></span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>BaseRobot.Connection</em> – The connection instance managing the APIs.
+Do a <cite>async with</cite> of that object to have the connected robot object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pymirokai.robot.initialize_coloredlogs">
+<span class="sig-prename descclassname"><span class="pre">pymirokai.robot.</span></span><span class="sig-name descname"><span class="pre">initialize_coloredlogs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">loglevel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'DEBUG'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.robot.initialize_coloredlogs" title="Link to this definition"></a></dt>
+<dd><p>Initialize logging with colored logs.</p>
+<p>This function sets up the logging configuration using the coloredlogs library,
+which provides colored output for log messages.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>loglevel</strong> (<em>str</em>) – The logging level to use (e.g., ‘DEBUG’, ‘INFO’, ‘WARNING’).</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="getting_started.html" class="btn btn-neutral float-left" title="Getting Started" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="features.html" class="btn btn-neutral float-right" title="Features" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright .</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

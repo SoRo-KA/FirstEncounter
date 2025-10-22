@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enums &mdash; Python  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Models" href="models.html" />
+    <link rel="prev" title="Core Modules" href="core.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Python
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="robot.html">Robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="skills_user.html">Skills (User)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="skills_admin.html">Skills (Admin)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="core.html">Core Modules</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Enums</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#pymirokai.enums.enums.Arm"><code class="docutils literal notranslate"><span class="pre">Arm</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.enums.enums.Arm.LEFT"><code class="docutils literal notranslate"><span class="pre">Arm.LEFT</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.enums.enums.Arm.RIGHT"><code class="docutils literal notranslate"><span class="pre">Arm.RIGHT</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#pymirokai.enums.enums.AttentionPriority"><code class="docutils literal notranslate"><span class="pre">AttentionPriority</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.enums.enums.AttentionPriority.DEPOSIT_ZONE"><code class="docutils literal notranslate"><span class="pre">AttentionPriority.DEPOSIT_ZONE</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.enums.enums.AttentionPriority.EVERYTHING"><code class="docutils literal notranslate"><span class="pre">AttentionPriority.EVERYTHING</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.enums.enums.AttentionPriority.FIREFLY"><code class="docutils literal notranslate"><span class="pre">AttentionPriority.FIREFLY</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.enums.enums.AttentionPriority.HANDLES"><code class="docutils literal notranslate"><span class="pre">AttentionPriority.HANDLES</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.enums.enums.AttentionPriority.HUMAN"><code class="docutils literal notranslate"><span class="pre">AttentionPriority.HUMAN</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#pymirokai.enums.enums.BackgroundExpression"><code class="docutils literal notranslate"><span class="pre">BackgroundExpression</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.enums.enums.BackgroundExpression.AMAZED"><code class="docutils literal notranslate"><span class="pre">BackgroundExpression.AMAZED</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.enums.enums.BackgroundExpression.ASLEEP"><code class="docutils literal notranslate"><span class="pre">BackgroundExpression.ASLEEP</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.enums.enums.BackgroundExpression.DAZZLED"><code class="docutils literal notranslate"><span class="pre">BackgroundExpression.DAZZLED</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.enums.enums.BackgroundExpression.DETERMINED"><code class="docutils literal notranslate"><span class="pre">BackgroundExpression.DETERMINED</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.enums.enums.BackgroundExpression.EMBARASSED"><code class="docutils literal notranslate"><span class="pre">BackgroundExpression.EMBARASSED</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.enums.enums.BackgroundExpression.HAPPY_BIG_SMILE"><code class="docutils literal notranslate"><span class="pre">BackgroundExpression.HAPPY_BIG_SMILE</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.enums.enums.BackgroundExpression.INTEREST"><code class="docutils literal notranslate"><span class="pre">BackgroundExpression.INTEREST</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.enums.enums.BackgroundExpression.JOY"><code class="docutils literal notranslate"><span class="pre">BackgroundExpression.JOY</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.enums.enums.BackgroundExpression.NEUTRAL"><code class="docutils literal notranslate"><span class="pre">BackgroundExpression.NEUTRAL</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.enums.enums.BackgroundExpression.PERPLEXED"><code class="docutils literal notranslate"><span class="pre">BackgroundExpression.PERPLEXED</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.enums.enums.BackgroundExpression.PRIDE"><code class="docutils literal notranslate"><span class="pre">BackgroundExpression.PRIDE</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.enums.enums.BackgroundExpression.SADNESS"><code class="docutils literal notranslate"><span class="pre">BackgroundExpression.SADNESS</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.enums.enums.BackgroundExpression.SURPRISE"><code class="docutils literal notranslate"><span class="pre">BackgroundExpression.SURPRISE</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#pymirokai.enums.enums.Ear"><code class="docutils literal notranslate"><span class="pre">Ear</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.enums.enums.Ear.LEFT"><code class="docutils literal notranslate"><span class="pre">Ear.LEFT</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.enums.enums.Ear.RIGHT"><code class="docutils literal notranslate"><span class="pre">Ear.RIGHT</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#pymirokai.enums.enums.EyesBehavior"><code class="docutils literal notranslate"><span class="pre">EyesBehavior</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.enums.enums.EyesBehavior.BROAD_LOOK_AWAY"><code class="docutils literal notranslate"><span class="pre">EyesBehavior.BROAD_LOOK_AWAY</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.enums.enums.EyesBehavior.EYE_WANDER"><code class="docutils literal notranslate"><span class="pre">EyesBehavior.EYE_WANDER</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.enums.enums.EyesBehavior.IDLE"><code class="docutils literal notranslate"><span class="pre">EyesBehavior.IDLE</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.enums.enums.EyesBehavior.INFINITE_SHAPE"><code class="docutils literal notranslate"><span class="pre">EyesBehavior.INFINITE_SHAPE</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.enums.enums.EyesBehavior.LOOK_DOWN"><code class="docutils literal notranslate"><span class="pre">EyesBehavior.LOOK_DOWN</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.enums.enums.EyesBehavior.LOOK_UP"><code class="docutils literal notranslate"><span class="pre">EyesBehavior.LOOK_UP</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.enums.enums.EyesBehavior.PIPED_RANDOM"><code class="docutils literal notranslate"><span class="pre">EyesBehavior.PIPED_RANDOM</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.enums.enums.EyesBehavior.STRAIGHT"><code class="docutils literal notranslate"><span class="pre">EyesBehavior.STRAIGHT</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#pymirokai.enums.enums.GraspSide"><code class="docutils literal notranslate"><span class="pre">GraspSide</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.enums.enums.GraspSide.LEFT"><code class="docutils literal notranslate"><span class="pre">GraspSide.LEFT</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.enums.enums.GraspSide.RIGHT"><code class="docutils literal notranslate"><span class="pre">GraspSide.RIGHT</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#pymirokai.enums.enums.Hand"><code class="docutils literal notranslate"><span class="pre">Hand</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.enums.enums.Hand.LEFT"><code class="docutils literal notranslate"><span class="pre">Hand.LEFT</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.enums.enums.Hand.RIGHT"><code class="docutils literal notranslate"><span class="pre">Hand.RIGHT</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#pymirokai.enums.enums.HandMode"><code class="docutils literal notranslate"><span class="pre">HandMode</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.enums.enums.HandMode.CLOSE_L"><code class="docutils literal notranslate"><span class="pre">HandMode.CLOSE_L</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.enums.enums.HandMode.CLOSE_R"><code class="docutils literal notranslate"><span class="pre">HandMode.CLOSE_R</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.enums.enums.HandMode.OPEN_L"><code class="docutils literal notranslate"><span class="pre">HandMode.OPEN_L</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.enums.enums.HandMode.OPEN_R"><code class="docutils literal notranslate"><span class="pre">HandMode.OPEN_R</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.enums.enums.HandMode.THUMB_DOWN_L"><code class="docutils literal notranslate"><span class="pre">HandMode.THUMB_DOWN_L</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.enums.enums.HandMode.THUMB_DOWN_R"><code class="docutils literal notranslate"><span class="pre">HandMode.THUMB_DOWN_R</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.enums.enums.HandMode.THUMB_UP_L"><code class="docutils literal notranslate"><span class="pre">HandMode.THUMB_UP_L</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.enums.enums.HandMode.THUMB_UP_R"><code class="docutils literal notranslate"><span class="pre">HandMode.THUMB_UP_R</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#pymirokai.enums.enums.HeadMode"><code class="docutils literal notranslate"><span class="pre">HeadMode</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.enums.enums.HeadMode.ANIMATE"><code class="docutils literal notranslate"><span class="pre">HeadMode.ANIMATE</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.enums.enums.HeadMode.FREEZE"><code class="docutils literal notranslate"><span class="pre">HeadMode.FREEZE</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.enums.enums.HeadMode.RESET"><code class="docutils literal notranslate"><span class="pre">HeadMode.RESET</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.enums.enums.HeadMode.SCAN"><code class="docutils literal notranslate"><span class="pre">HeadMode.SCAN</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.enums.enums.HeadMode.TRACK_ATTENTION"><code class="docutils literal notranslate"><span class="pre">HeadMode.TRACK_ATTENTION</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="models.html">Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utils.html">Utils</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Python</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Enums</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/files/enums.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-pymirokai.enums.enums">
+<span id="enums"></span><h1>Enums<a class="headerlink" href="#module-pymirokai.enums.enums" title="Link to this heading"></a></h1>
+<p>This module contains enumerations for various features of the robot.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="pymirokai.enums.enums.Arm">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pymirokai.enums.enums.</span></span><span class="sig-name descname"><span class="pre">Arm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.enums.enums.Arm" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>Enumeration for the arms of the robot.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.enums.enums.Arm.LEFT">
+<span class="sig-name descname"><span class="pre">LEFT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'left'</span></em><a class="headerlink" href="#pymirokai.enums.enums.Arm.LEFT" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.enums.enums.Arm.RIGHT">
+<span class="sig-name descname"><span class="pre">RIGHT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'right'</span></em><a class="headerlink" href="#pymirokai.enums.enums.Arm.RIGHT" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pymirokai.enums.enums.AttentionPriority">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pymirokai.enums.enums.</span></span><span class="sig-name descname"><span class="pre">AttentionPriority</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.enums.enums.AttentionPriority" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>Enumeration for attention priority of the robot.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.enums.enums.AttentionPriority.DEPOSIT_ZONE">
+<span class="sig-name descname"><span class="pre">DEPOSIT_ZONE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'deposit_zone'</span></em><a class="headerlink" href="#pymirokai.enums.enums.AttentionPriority.DEPOSIT_ZONE" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.enums.enums.AttentionPriority.EVERYTHING">
+<span class="sig-name descname"><span class="pre">EVERYTHING</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'everything'</span></em><a class="headerlink" href="#pymirokai.enums.enums.AttentionPriority.EVERYTHING" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.enums.enums.AttentionPriority.FIREFLY">
+<span class="sig-name descname"><span class="pre">FIREFLY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'firefly'</span></em><a class="headerlink" href="#pymirokai.enums.enums.AttentionPriority.FIREFLY" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.enums.enums.AttentionPriority.HANDLES">
+<span class="sig-name descname"><span class="pre">HANDLES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'handles'</span></em><a class="headerlink" href="#pymirokai.enums.enums.AttentionPriority.HANDLES" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.enums.enums.AttentionPriority.HUMAN">
+<span class="sig-name descname"><span class="pre">HUMAN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'human'</span></em><a class="headerlink" href="#pymirokai.enums.enums.AttentionPriority.HUMAN" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pymirokai.enums.enums.BackgroundExpression">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pymirokai.enums.enums.</span></span><span class="sig-name descname"><span class="pre">BackgroundExpression</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.enums.enums.BackgroundExpression" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>Enumeration for background expressions of the robot’s face.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.enums.enums.BackgroundExpression.AMAZED">
+<span class="sig-name descname"><span class="pre">AMAZED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'emotion_amazed'</span></em><a class="headerlink" href="#pymirokai.enums.enums.BackgroundExpression.AMAZED" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.enums.enums.BackgroundExpression.ASLEEP">
+<span class="sig-name descname"><span class="pre">ASLEEP</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'emotion_asleep'</span></em><a class="headerlink" href="#pymirokai.enums.enums.BackgroundExpression.ASLEEP" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.enums.enums.BackgroundExpression.DAZZLED">
+<span class="sig-name descname"><span class="pre">DAZZLED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'emotion_dazzled'</span></em><a class="headerlink" href="#pymirokai.enums.enums.BackgroundExpression.DAZZLED" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.enums.enums.BackgroundExpression.DETERMINED">
+<span class="sig-name descname"><span class="pre">DETERMINED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'emotion_determined'</span></em><a class="headerlink" href="#pymirokai.enums.enums.BackgroundExpression.DETERMINED" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.enums.enums.BackgroundExpression.EMBARASSED">
+<span class="sig-name descname"><span class="pre">EMBARASSED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'emotion_embarassed'</span></em><a class="headerlink" href="#pymirokai.enums.enums.BackgroundExpression.EMBARASSED" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.enums.enums.BackgroundExpression.HAPPY_BIG_SMILE">
+<span class="sig-name descname"><span class="pre">HAPPY_BIG_SMILE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'emotion_happy_big_smile'</span></em><a class="headerlink" href="#pymirokai.enums.enums.BackgroundExpression.HAPPY_BIG_SMILE" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.enums.enums.BackgroundExpression.INTEREST">
+<span class="sig-name descname"><span class="pre">INTEREST</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'emotion_interest'</span></em><a class="headerlink" href="#pymirokai.enums.enums.BackgroundExpression.INTEREST" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.enums.enums.BackgroundExpression.JOY">
+<span class="sig-name descname"><span class="pre">JOY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'emotion_joy'</span></em><a class="headerlink" href="#pymirokai.enums.enums.BackgroundExpression.JOY" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.enums.enums.BackgroundExpression.NEUTRAL">
+<span class="sig-name descname"><span class="pre">NEUTRAL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'emotion_neutral'</span></em><a class="headerlink" href="#pymirokai.enums.enums.BackgroundExpression.NEUTRAL" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.enums.enums.BackgroundExpression.PERPLEXED">
+<span class="sig-name descname"><span class="pre">PERPLEXED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'emotion_perplexed'</span></em><a class="headerlink" href="#pymirokai.enums.enums.BackgroundExpression.PERPLEXED" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.enums.enums.BackgroundExpression.PRIDE">
+<span class="sig-name descname"><span class="pre">PRIDE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'emotion_pride'</span></em><a class="headerlink" href="#pymirokai.enums.enums.BackgroundExpression.PRIDE" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.enums.enums.BackgroundExpression.SADNESS">
+<span class="sig-name descname"><span class="pre">SADNESS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'emotion_sadness'</span></em><a class="headerlink" href="#pymirokai.enums.enums.BackgroundExpression.SADNESS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.enums.enums.BackgroundExpression.SURPRISE">
+<span class="sig-name descname"><span class="pre">SURPRISE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'emotion_surprise'</span></em><a class="headerlink" href="#pymirokai.enums.enums.BackgroundExpression.SURPRISE" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pymirokai.enums.enums.Ear">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pymirokai.enums.enums.</span></span><span class="sig-name descname"><span class="pre">Ear</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.enums.enums.Ear" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>Enumeration for the ears of the robot.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.enums.enums.Ear.LEFT">
+<span class="sig-name descname"><span class="pre">LEFT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'left'</span></em><a class="headerlink" href="#pymirokai.enums.enums.Ear.LEFT" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.enums.enums.Ear.RIGHT">
+<span class="sig-name descname"><span class="pre">RIGHT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'right'</span></em><a class="headerlink" href="#pymirokai.enums.enums.Ear.RIGHT" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pymirokai.enums.enums.EyesBehavior">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pymirokai.enums.enums.</span></span><span class="sig-name descname"><span class="pre">EyesBehavior</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.enums.enums.EyesBehavior" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>Enumeration for eyes behavior of the robot.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.enums.enums.EyesBehavior.BROAD_LOOK_AWAY">
+<span class="sig-name descname"><span class="pre">BROAD_LOOK_AWAY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'broad_look_away'</span></em><a class="headerlink" href="#pymirokai.enums.enums.EyesBehavior.BROAD_LOOK_AWAY" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.enums.enums.EyesBehavior.EYE_WANDER">
+<span class="sig-name descname"><span class="pre">EYE_WANDER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'eye_wander'</span></em><a class="headerlink" href="#pymirokai.enums.enums.EyesBehavior.EYE_WANDER" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.enums.enums.EyesBehavior.IDLE">
+<span class="sig-name descname"><span class="pre">IDLE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'idle'</span></em><a class="headerlink" href="#pymirokai.enums.enums.EyesBehavior.IDLE" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.enums.enums.EyesBehavior.INFINITE_SHAPE">
+<span class="sig-name descname"><span class="pre">INFINITE_SHAPE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'infinite_shape'</span></em><a class="headerlink" href="#pymirokai.enums.enums.EyesBehavior.INFINITE_SHAPE" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.enums.enums.EyesBehavior.LOOK_DOWN">
+<span class="sig-name descname"><span class="pre">LOOK_DOWN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'look_down'</span></em><a class="headerlink" href="#pymirokai.enums.enums.EyesBehavior.LOOK_DOWN" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.enums.enums.EyesBehavior.LOOK_UP">
+<span class="sig-name descname"><span class="pre">LOOK_UP</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'look_up'</span></em><a class="headerlink" href="#pymirokai.enums.enums.EyesBehavior.LOOK_UP" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.enums.enums.EyesBehavior.PIPED_RANDOM">
+<span class="sig-name descname"><span class="pre">PIPED_RANDOM</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'piped_random'</span></em><a class="headerlink" href="#pymirokai.enums.enums.EyesBehavior.PIPED_RANDOM" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.enums.enums.EyesBehavior.STRAIGHT">
+<span class="sig-name descname"><span class="pre">STRAIGHT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'straight'</span></em><a class="headerlink" href="#pymirokai.enums.enums.EyesBehavior.STRAIGHT" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pymirokai.enums.enums.GraspSide">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pymirokai.enums.enums.</span></span><span class="sig-name descname"><span class="pre">GraspSide</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.enums.enums.GraspSide" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>Enumeration for grasping side of the robot.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.enums.enums.GraspSide.LEFT">
+<span class="sig-name descname"><span class="pre">LEFT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'left'</span></em><a class="headerlink" href="#pymirokai.enums.enums.GraspSide.LEFT" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.enums.enums.GraspSide.RIGHT">
+<span class="sig-name descname"><span class="pre">RIGHT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'right'</span></em><a class="headerlink" href="#pymirokai.enums.enums.GraspSide.RIGHT" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pymirokai.enums.enums.Hand">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pymirokai.enums.enums.</span></span><span class="sig-name descname"><span class="pre">Hand</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.enums.enums.Hand" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>Enumeration for the hands of the robot.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.enums.enums.Hand.LEFT">
+<span class="sig-name descname"><span class="pre">LEFT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'left'</span></em><a class="headerlink" href="#pymirokai.enums.enums.Hand.LEFT" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.enums.enums.Hand.RIGHT">
+<span class="sig-name descname"><span class="pre">RIGHT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'right'</span></em><a class="headerlink" href="#pymirokai.enums.enums.Hand.RIGHT" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pymirokai.enums.enums.HandMode">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pymirokai.enums.enums.</span></span><span class="sig-name descname"><span class="pre">HandMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.enums.enums.HandMode" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>Enumeration for hand mode of the robot.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.enums.enums.HandMode.CLOSE_L">
+<span class="sig-name descname"><span class="pre">CLOSE_L</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'close_l'</span></em><a class="headerlink" href="#pymirokai.enums.enums.HandMode.CLOSE_L" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.enums.enums.HandMode.CLOSE_R">
+<span class="sig-name descname"><span class="pre">CLOSE_R</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'close_r'</span></em><a class="headerlink" href="#pymirokai.enums.enums.HandMode.CLOSE_R" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.enums.enums.HandMode.OPEN_L">
+<span class="sig-name descname"><span class="pre">OPEN_L</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'open_l'</span></em><a class="headerlink" href="#pymirokai.enums.enums.HandMode.OPEN_L" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.enums.enums.HandMode.OPEN_R">
+<span class="sig-name descname"><span class="pre">OPEN_R</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'open_r'</span></em><a class="headerlink" href="#pymirokai.enums.enums.HandMode.OPEN_R" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.enums.enums.HandMode.THUMB_DOWN_L">
+<span class="sig-name descname"><span class="pre">THUMB_DOWN_L</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'thumb_down_l'</span></em><a class="headerlink" href="#pymirokai.enums.enums.HandMode.THUMB_DOWN_L" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.enums.enums.HandMode.THUMB_DOWN_R">
+<span class="sig-name descname"><span class="pre">THUMB_DOWN_R</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'thumb_down_r'</span></em><a class="headerlink" href="#pymirokai.enums.enums.HandMode.THUMB_DOWN_R" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.enums.enums.HandMode.THUMB_UP_L">
+<span class="sig-name descname"><span class="pre">THUMB_UP_L</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'thumb_up_l'</span></em><a class="headerlink" href="#pymirokai.enums.enums.HandMode.THUMB_UP_L" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.enums.enums.HandMode.THUMB_UP_R">
+<span class="sig-name descname"><span class="pre">THUMB_UP_R</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'thumb_up_r'</span></em><a class="headerlink" href="#pymirokai.enums.enums.HandMode.THUMB_UP_R" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pymirokai.enums.enums.HeadMode">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pymirokai.enums.enums.</span></span><span class="sig-name descname"><span class="pre">HeadMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.enums.enums.HeadMode" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>Enumeration for head mode of the robot.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.enums.enums.HeadMode.ANIMATE">
+<span class="sig-name descname"><span class="pre">ANIMATE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'animate'</span></em><a class="headerlink" href="#pymirokai.enums.enums.HeadMode.ANIMATE" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.enums.enums.HeadMode.FREEZE">
+<span class="sig-name descname"><span class="pre">FREEZE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'freeze'</span></em><a class="headerlink" href="#pymirokai.enums.enums.HeadMode.FREEZE" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.enums.enums.HeadMode.RESET">
+<span class="sig-name descname"><span class="pre">RESET</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'reset'</span></em><a class="headerlink" href="#pymirokai.enums.enums.HeadMode.RESET" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.enums.enums.HeadMode.SCAN">
+<span class="sig-name descname"><span class="pre">SCAN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'scan'</span></em><a class="headerlink" href="#pymirokai.enums.enums.HeadMode.SCAN" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.enums.enums.HeadMode.TRACK_ATTENTION">
+<span class="sig-name descname"><span class="pre">TRACK_ATTENTION</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'trackAttention'</span></em><a class="headerlink" href="#pymirokai.enums.enums.HeadMode.TRACK_ATTENTION" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="core.html" class="btn btn-neutral float-left" title="Core Modules" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="models.html" class="btn btn-neutral float-right" title="Models" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright .</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

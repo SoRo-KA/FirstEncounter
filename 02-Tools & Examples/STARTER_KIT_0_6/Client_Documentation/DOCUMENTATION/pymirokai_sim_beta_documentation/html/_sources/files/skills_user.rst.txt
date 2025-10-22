@@ -1,0 +1,58 @@
+Skills (User)
+=============
+
+Animate
+-------
+.. automodule:: pymirokai.features.skills.user.animate
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Freeze
+------
+.. automodule:: pymirokai.features.skills.user.freeze
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Interact
+--------
+.. automodule:: pymirokai.features.skills.user.interact
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Manipulate
+----------
+.. automodule:: pymirokai.features.skills.user.manipulate
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Navigate
+--------
+.. automodule:: pymirokai.features.skills.user.navigate
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Show-Off
+--------
+.. automodule:: pymirokai.features.skills.user.show_off
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+System
+--------
+.. automodule:: pymirokai.features.skills.user.system
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Transport
+---------
+.. automodule:: pymirokai.features.skills.user.transport
+   :members:
+   :undoc-members:
+   :show-inheritance:

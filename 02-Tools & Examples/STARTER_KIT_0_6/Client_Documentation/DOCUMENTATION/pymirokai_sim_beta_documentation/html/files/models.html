@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Models &mdash; Python  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Utils" href="utils.html" />
+    <link rel="prev" title="Enums" href="enums.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Python
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="robot.html">Robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="skills_user.html">Skills (User)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="skills_admin.html">Skills (Admin)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="core.html">Core Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="enums.html">Enums</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Models</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#pymirokai.models.data_models.BoolCommand"><code class="docutils literal notranslate"><span class="pre">BoolCommand</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.models.data_models.BoolCommand.command"><code class="docutils literal notranslate"><span class="pre">BoolCommand.command</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.models.data_models.BoolCommand.value"><code class="docutils literal notranslate"><span class="pre">BoolCommand.value</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#pymirokai.models.data_models.Coordinates"><code class="docutils literal notranslate"><span class="pre">Coordinates</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.models.data_models.Coordinates.theta"><code class="docutils literal notranslate"><span class="pre">Coordinates.theta</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.models.data_models.Coordinates.to_list"><code class="docutils literal notranslate"><span class="pre">Coordinates.to_list()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.models.data_models.Coordinates.x"><code class="docutils literal notranslate"><span class="pre">Coordinates.x</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.models.data_models.Coordinates.y"><code class="docutils literal notranslate"><span class="pre">Coordinates.y</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.models.data_models.Coordinates.z"><code class="docutils literal notranslate"><span class="pre">Coordinates.z</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#pymirokai.models.data_models.DepositZone"><code class="docutils literal notranslate"><span class="pre">DepositZone</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pymirokai.models.data_models.DictCommand"><code class="docutils literal notranslate"><span class="pre">DictCommand</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.models.data_models.DictCommand.command"><code class="docutils literal notranslate"><span class="pre">DictCommand.command</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.models.data_models.DictCommand.value"><code class="docutils literal notranslate"><span class="pre">DictCommand.value</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#pymirokai.models.data_models.EnchantedHuman"><code class="docutils literal notranslate"><span class="pre">EnchantedHuman</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pymirokai.models.data_models.EnchantedLocation"><code class="docutils literal notranslate"><span class="pre">EnchantedLocation</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pymirokai.models.data_models.EnchantedObject"><code class="docutils literal notranslate"><span class="pre">EnchantedObject</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pymirokai.models.data_models.FloatCommand"><code class="docutils literal notranslate"><span class="pre">FloatCommand</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.models.data_models.FloatCommand.command"><code class="docutils literal notranslate"><span class="pre">FloatCommand.command</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.models.data_models.FloatCommand.value"><code class="docutils literal notranslate"><span class="pre">FloatCommand.value</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#pymirokai.models.data_models.IntCommand"><code class="docutils literal notranslate"><span class="pre">IntCommand</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.models.data_models.IntCommand.command"><code class="docutils literal notranslate"><span class="pre">IntCommand.command</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.models.data_models.IntCommand.value"><code class="docutils literal notranslate"><span class="pre">IntCommand.value</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#pymirokai.models.data_models.ListCommand"><code class="docutils literal notranslate"><span class="pre">ListCommand</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.models.data_models.ListCommand.command"><code class="docutils literal notranslate"><span class="pre">ListCommand.command</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.models.data_models.ListCommand.value"><code class="docutils literal notranslate"><span class="pre">ListCommand.value</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#pymirokai.models.data_models.NoArgCommand"><code class="docutils literal notranslate"><span class="pre">NoArgCommand</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.models.data_models.NoArgCommand.command"><code class="docutils literal notranslate"><span class="pre">NoArgCommand.command</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#pymirokai.models.data_models.Rune"><code class="docutils literal notranslate"><span class="pre">Rune</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.models.data_models.Rune.id"><code class="docutils literal notranslate"><span class="pre">Rune.id</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#pymirokai.models.data_models.StrCommand"><code class="docutils literal notranslate"><span class="pre">StrCommand</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.models.data_models.StrCommand.command"><code class="docutils literal notranslate"><span class="pre">StrCommand.command</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.models.data_models.StrCommand.value"><code class="docutils literal notranslate"><span class="pre">StrCommand.value</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="utils.html">Utils</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Python</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Models</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/files/models.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-pymirokai.models.data_models">
+<span id="models"></span><h1>Models<a class="headerlink" href="#module-pymirokai.models.data_models" title="Link to this heading"></a></h1>
+<p>Models used for communication with the REST API.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="pymirokai.models.data_models.BoolCommand">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pymirokai.models.data_models.</span></span><span class="sig-name descname"><span class="pre">BoolCommand</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.models.data_models.BoolCommand" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<p>Represents a command associated with a Boolean value.</p>
+<p>This model is crucial for enabling or disabling features through API commands, such as toggling settings.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>command</strong> (<em>str</em>)</p></li>
+<li><p><strong>value</strong> (<em>bool</em>)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.models.data_models.BoolCommand.command">
+<span class="sig-name descname"><span class="pre">command</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></em><a class="headerlink" href="#pymirokai.models.data_models.BoolCommand.command" title="Link to this definition"></a></dt>
+<dd><p>The command to be executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.models.data_models.BoolCommand.value">
+<span class="sig-name descname"><span class="pre">value</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></em><a class="headerlink" href="#pymirokai.models.data_models.BoolCommand.value" title="Link to this definition"></a></dt>
+<dd><p>The Boolean state (True or False) that the command will apply.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pymirokai.models.data_models.Coordinates">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pymirokai.models.data_models.</span></span><span class="sig-name descname"><span class="pre">Coordinates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.models.data_models.Coordinates" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<p>Defines a set of coordinates in a three-dimensional space along with an orientation.</p>
+<p>This model is used to represent spatial data with an optional rotational component,
+which is crucial for navigation and positioning tasks in a 3D environment.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>float</em>)</p></li>
+<li><p><strong>y</strong> (<em>float</em>)</p></li>
+<li><p><strong>z</strong> (<em>float</em>)</p></li>
+<li><p><strong>theta</strong> (<em>float</em>)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.models.data_models.Coordinates.theta">
+<span class="sig-name descname"><span class="pre">theta</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></em><a class="headerlink" href="#pymirokai.models.data_models.Coordinates.theta" title="Link to this definition"></a></dt>
+<dd><p>The rotation around the Z-axis, in degrees. Default is 0.0.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pymirokai.models.data_models.Coordinates.to_list">
+<span class="sig-name descname"><span class="pre">to_list</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.models.data_models.Coordinates.to_list" title="Link to this definition"></a></dt>
+<dd><p>Convert coordinates model to a [x, y, z] list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.models.data_models.Coordinates.x">
+<span class="sig-name descname"><span class="pre">x</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></em><a class="headerlink" href="#pymirokai.models.data_models.Coordinates.x" title="Link to this definition"></a></dt>
+<dd><p>The X-coordinate in space, representing horizontal movement (forward/backward). Default is 0.0.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.models.data_models.Coordinates.y">
+<span class="sig-name descname"><span class="pre">y</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></em><a class="headerlink" href="#pymirokai.models.data_models.Coordinates.y" title="Link to this definition"></a></dt>
+<dd><p>The Y-coordinate in space, representing horizontal movement (left/right). Default is 0.0.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.models.data_models.Coordinates.z">
+<span class="sig-name descname"><span class="pre">z</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></em><a class="headerlink" href="#pymirokai.models.data_models.Coordinates.z" title="Link to this definition"></a></dt>
+<dd><p>The Z-coordinate in space, representing vertical movement (up/down). Default is 0.0.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pymirokai.models.data_models.DepositZone">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pymirokai.models.data_models.</span></span><span class="sig-name descname"><span class="pre">DepositZone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.models.data_models.DepositZone" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pymirokai.models.data_models.Rune" title="pymirokai.models.data_models.Rune"><code class="xref py py-class docutils literal notranslate"><span class="pre">Rune</span></code></a></p>
+<p>Represents a deposit zone.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>id</strong> (<em>str</em>)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pymirokai.models.data_models.DictCommand">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pymirokai.models.data_models.</span></span><span class="sig-name descname"><span class="pre">DictCommand</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.models.data_models.DictCommand" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<p>Models a command that involves dictionary data.</p>
+<p>Often used for commands requiring key-value pair configurations, particularly when adjusting complex settings.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>command</strong> (<em>str</em>)</p></li>
+<li><p><strong>value</strong> (<em>dict</em>)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.models.data_models.DictCommand.command">
+<span class="sig-name descname"><span class="pre">command</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></em><a class="headerlink" href="#pymirokai.models.data_models.DictCommand.command" title="Link to this definition"></a></dt>
+<dd><p>The command to be executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.models.data_models.DictCommand.value">
+<span class="sig-name descname"><span class="pre">value</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></em><a class="headerlink" href="#pymirokai.models.data_models.DictCommand.value" title="Link to this definition"></a></dt>
+<dd><p>The dictionary containing configuration data or parameters for the command.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pymirokai.models.data_models.EnchantedHuman">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pymirokai.models.data_models.</span></span><span class="sig-name descname"><span class="pre">EnchantedHuman</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.models.data_models.EnchantedHuman" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pymirokai.models.data_models.Rune" title="pymirokai.models.data_models.Rune"><code class="xref py py-class docutils literal notranslate"><span class="pre">Rune</span></code></a></p>
+<p>Represents a rune representing a human.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>id</strong> (<em>str</em>)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pymirokai.models.data_models.EnchantedLocation">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pymirokai.models.data_models.</span></span><span class="sig-name descname"><span class="pre">EnchantedLocation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.models.data_models.EnchantedLocation" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pymirokai.models.data_models.Rune" title="pymirokai.models.data_models.Rune"><code class="xref py py-class docutils literal notranslate"><span class="pre">Rune</span></code></a></p>
+<p>Represents a rune representing a location.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>id</strong> (<em>str</em>)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pymirokai.models.data_models.EnchantedObject">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pymirokai.models.data_models.</span></span><span class="sig-name descname"><span class="pre">EnchantedObject</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.models.data_models.EnchantedObject" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pymirokai.models.data_models.Rune" title="pymirokai.models.data_models.Rune"><code class="xref py py-class docutils literal notranslate"><span class="pre">Rune</span></code></a></p>
+<p>Represents a rune representing an object to grasp.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>id</strong> (<em>str</em>)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pymirokai.models.data_models.FloatCommand">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pymirokai.models.data_models.</span></span><span class="sig-name descname"><span class="pre">FloatCommand</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.models.data_models.FloatCommand" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<p>Defines a command that includes a floating-point number.</p>
+<p>Used for commands that involve precision settings or adjustments, such as configuring sensitivity levels.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>command</strong> (<em>str</em>)</p></li>
+<li><p><strong>value</strong> (<em>float</em>)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.models.data_models.FloatCommand.command">
+<span class="sig-name descname"><span class="pre">command</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></em><a class="headerlink" href="#pymirokai.models.data_models.FloatCommand.command" title="Link to this definition"></a></dt>
+<dd><p>The command to be executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.models.data_models.FloatCommand.value">
+<span class="sig-name descname"><span class="pre">value</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></em><a class="headerlink" href="#pymirokai.models.data_models.FloatCommand.value" title="Link to this definition"></a></dt>
+<dd><p>The floating-point number that specifies the command’s parameter.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pymirokai.models.data_models.IntCommand">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pymirokai.models.data_models.</span></span><span class="sig-name descname"><span class="pre">IntCommand</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.models.data_models.IntCommand" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<p>Encapsulates a command that requires an integer value.</p>
+<p>This model is used for commands that adjust settings or configure parameters represented as integers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>command</strong> (<em>str</em>)</p></li>
+<li><p><strong>value</strong> (<em>int</em>)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.models.data_models.IntCommand.command">
+<span class="sig-name descname"><span class="pre">command</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></em><a class="headerlink" href="#pymirokai.models.data_models.IntCommand.command" title="Link to this definition"></a></dt>
+<dd><p>The command to be executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.models.data_models.IntCommand.value">
+<span class="sig-name descname"><span class="pre">value</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></em><a class="headerlink" href="#pymirokai.models.data_models.IntCommand.value" title="Link to this definition"></a></dt>
+<dd><p>The integer value necessary to carry out the command.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pymirokai.models.data_models.ListCommand">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pymirokai.models.data_models.</span></span><span class="sig-name descname"><span class="pre">ListCommand</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.models.data_models.ListCommand" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<p>Describes a command that involves a list of values.</p>
+<p>This model is used for commands that need to handle multiple elements, such as configuring a
+series of actions or settings.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>command</strong> (<em>str</em>)</p></li>
+<li><p><strong>value</strong> (<em>list</em>)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.models.data_models.ListCommand.command">
+<span class="sig-name descname"><span class="pre">command</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></em><a class="headerlink" href="#pymirokai.models.data_models.ListCommand.command" title="Link to this definition"></a></dt>
+<dd><p>The command name.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.models.data_models.ListCommand.value">
+<span class="sig-name descname"><span class="pre">value</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></em><a class="headerlink" href="#pymirokai.models.data_models.ListCommand.value" title="Link to this definition"></a></dt>
+<dd><p>The list of values to be processed or configured by the command.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pymirokai.models.data_models.NoArgCommand">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pymirokai.models.data_models.</span></span><span class="sig-name descname"><span class="pre">NoArgCommand</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.models.data_models.NoArgCommand" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<p>Represents a command with no arguments.</p>
+<p>This model is used for commands that do not require any parameters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>command</strong> (<em>str</em>)</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.models.data_models.NoArgCommand.command">
+<span class="sig-name descname"><span class="pre">command</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></em><a class="headerlink" href="#pymirokai.models.data_models.NoArgCommand.command" title="Link to this definition"></a></dt>
+<dd><p>The command name.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pymirokai.models.data_models.Rune">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pymirokai.models.data_models.</span></span><span class="sig-name descname"><span class="pre">Rune</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.models.data_models.Rune" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<p>Represents a rune.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>id</strong> (<em>str</em>)</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.models.data_models.Rune.id">
+<span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></em><a class="headerlink" href="#pymirokai.models.data_models.Rune.id" title="Link to this definition"></a></dt>
+<dd><p>The run virtual id.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pymirokai.models.data_models.StrCommand">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pymirokai.models.data_models.</span></span><span class="sig-name descname"><span class="pre">StrCommand</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.models.data_models.StrCommand" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<p>Represents a command that involves a string value.</p>
+<p>This model is used to process textual commands that modify settings or trigger actions
+within a system.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>command</strong> (<em>str</em>)</p></li>
+<li><p><strong>value</strong> (<em>str</em>)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.models.data_models.StrCommand.command">
+<span class="sig-name descname"><span class="pre">command</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></em><a class="headerlink" href="#pymirokai.models.data_models.StrCommand.command" title="Link to this definition"></a></dt>
+<dd><p>The command to be executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymirokai.models.data_models.StrCommand.value">
+<span class="sig-name descname"><span class="pre">value</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></em><a class="headerlink" href="#pymirokai.models.data_models.StrCommand.value" title="Link to this definition"></a></dt>
+<dd><p>The string value associated with the command.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="enums.html" class="btn btn-neutral float-left" title="Enums" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="utils.html" class="btn btn-neutral float-right" title="Utils" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright .</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

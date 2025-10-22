@@ -1,0 +1,6 @@
+Robot
+=====
+.. automodule:: pymirokai.robot
+   :members:
+   :undoc-members:
+   :show-inheritance:

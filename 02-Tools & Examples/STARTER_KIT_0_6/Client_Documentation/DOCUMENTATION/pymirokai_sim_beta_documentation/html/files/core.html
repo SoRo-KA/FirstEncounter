@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Core Modules &mdash; Python  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Enums" href="enums.html" />
+    <link rel="prev" title="Skills (Admin)" href="skills_admin.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Python
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="robot.html">Robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="skills_user.html">Skills (User)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="skills_admin.html">Skills (Admin)</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Core Modules</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#pymirokai.core.rest_api.RestAPI"><code class="docutils literal notranslate"><span class="pre">RestAPI</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.core.rest_api.RestAPI.authentify"><code class="docutils literal notranslate"><span class="pre">RestAPI.authentify()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.core.rest_api.RestAPI.close"><code class="docutils literal notranslate"><span class="pre">RestAPI.close()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.core.rest_api.RestAPI.connect"><code class="docutils literal notranslate"><span class="pre">RestAPI.connect()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.core.rest_api.RestAPI.get_data_and_update_token_and_client_id"><code class="docutils literal notranslate"><span class="pre">RestAPI.get_data_and_update_token_and_client_id()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.core.rest_api.RestAPI.get_services"><code class="docutils literal notranslate"><span class="pre">RestAPI.get_services()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.core.rest_api.RestAPI.send_command"><code class="docutils literal notranslate"><span class="pre">RestAPI.send_command()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.core.rest_api.RestAPI.setup_connection"><code class="docutils literal notranslate"><span class="pre">RestAPI.setup_connection()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.core.rest_api.RestAPI.start"><code class="docutils literal notranslate"><span class="pre">RestAPI.start()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#pymirokai.core.websocket_api.WebSocketAPI"><code class="docutils literal notranslate"><span class="pre">WebSocketAPI</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.core.websocket_api.WebSocketAPI.close"><code class="docutils literal notranslate"><span class="pre">WebSocketAPI.close()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.core.websocket_api.WebSocketAPI.connect"><code class="docutils literal notranslate"><span class="pre">WebSocketAPI.connect()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.core.websocket_api.WebSocketAPI.get_data"><code class="docutils literal notranslate"><span class="pre">WebSocketAPI.get_data()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.core.websocket_api.WebSocketAPI.publish"><code class="docutils literal notranslate"><span class="pre">WebSocketAPI.publish()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.core.websocket_api.WebSocketAPI.register_callback"><code class="docutils literal notranslate"><span class="pre">WebSocketAPI.register_callback()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.core.websocket_api.WebSocketAPI.start"><code class="docutils literal notranslate"><span class="pre">WebSocketAPI.start()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.core.websocket_api.WebSocketAPI.subscribe"><code class="docutils literal notranslate"><span class="pre">WebSocketAPI.subscribe()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymirokai.core.websocket_api.WebSocketAPI.unsubscribe"><code class="docutils literal notranslate"><span class="pre">WebSocketAPI.unsubscribe()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="enums.html">Enums</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models.html">Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utils.html">Utils</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Python</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Core Modules</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/files/core.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-pymirokai.core.rest_api">
+<span id="core-modules"></span><h1>Core Modules<a class="headerlink" href="#module-pymirokai.core.rest_api" title="Link to this heading"></a></h1>
+<p>This module contains the RestAPI class for communicating with the REST API.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="pymirokai.core.rest_api.RestAPI">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pymirokai.core.rest_api.</span></span><span class="sig-name descname"><span class="pre">RestAPI</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_version</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'v1'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">retry_interval</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.core.rest_api.RestAPI" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class to handle REST API communication.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>api_version</strong> (<em>str</em>)</p></li>
+<li><p><strong>retry_interval</strong> (<em>int</em>)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pymirokai.core.rest_api.RestAPI.authentify">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">authentify</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.core.rest_api.RestAPI.authentify" title="Link to this definition"></a></dt>
+<dd><p>Retrieve the mission ID and JWT token using the API key.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pymirokai.core.rest_api.RestAPI.close">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.core.rest_api.RestAPI.close" title="Link to this definition"></a></dt>
+<dd><p>Close the REST API connection.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pymirokai.core.rest_api.RestAPI.connect">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">connect</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.core.rest_api.RestAPI.connect" title="Link to this definition"></a></dt>
+<dd><p>Check the connection status of the REST API and update the status.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pymirokai.core.rest_api.RestAPI.get_data_and_update_token_and_client_id">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_data_and_update_token_and_client_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">response</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.core.rest_api.RestAPI.get_data_and_update_token_and_client_id" title="Link to this definition"></a></dt>
+<dd><p>From a response from the API, recursively pare json, update client_id and JWT token.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pymirokai.core.rest_api.RestAPI.get_services">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_services</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">system</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">service</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.core.rest_api.RestAPI.get_services" title="Link to this definition"></a></dt>
+<dd><p>Either get the list of available services, or the service logs of a specific service.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>system</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – The system to get a specific service (head/base).</p></li>
+<li><p><strong>service</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – The service name.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code>]</span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>Dict[str, Any]</em> – The response from the API.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pymirokai.core.rest_api.RestAPI.send_command">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">send_command</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">endpoint</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.core.rest_api.RestAPI.send_command" title="Link to this definition"></a></dt>
+<dd><p>Send a command to the specified endpoint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>endpoint</strong> (<em>str</em>) – The endpoint to send the command to.</p></li>
+<li><p><strong>model</strong> (<em>BaseModel</em>) – The command model.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>Dict[str, Any]</em> – The response from the API.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pymirokai.core.rest_api.RestAPI.setup_connection">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">setup_connection</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.core.rest_api.RestAPI.setup_connection" title="Link to this definition"></a></dt>
+<dd><p>Get the jwt_token and client_id.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pymirokai.core.rest_api.RestAPI.start">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">start</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">api_key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">set_jwt_token</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">get_jwt_token</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.core.rest_api.RestAPI.start" title="Link to this definition"></a></dt>
+<dd><p>Start the REST API session and connection check.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>api_url</strong> (<em>str</em>) – The API URL on which to connect</p></li>
+<li><p><strong>api_key</strong> (<em>str</em>) – The API key to use.</p></li>
+<li><p><strong>get_jwt_token</strong> (<em>callable</em>) – Callback to get the JWT token</p></li>
+<li><p><strong>set_jwt_token</strong> (<em>callable</em>) – Callback to set the JWT token</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<p id="module-pymirokai.core.websocket_api">This module contains the WebSocketAPI class for communicating with the WebSocket.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="pymirokai.core.websocket_api.WebSocketAPI">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pymirokai.core.websocket_api.</span></span><span class="sig-name descname"><span class="pre">WebSocketAPI</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">retry_interval</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.core.websocket_api.WebSocketAPI" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class to handle WebSocket communication.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>retry_interval</strong> (<em>int</em>)</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pymirokai.core.websocket_api.WebSocketAPI.close">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.core.websocket_api.WebSocketAPI.close" title="Link to this definition"></a></dt>
+<dd><p>Close the WebSocket connection.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pymirokai.core.websocket_api.WebSocketAPI.connect">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">connect</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.core.websocket_api.WebSocketAPI.connect" title="Link to this definition"></a></dt>
+<dd><p>Connect to the WebSocket and start the data retrieval.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pymirokai.core.websocket_api.WebSocketAPI.get_data">
+<span class="sig-name descname"><span class="pre">get_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.core.websocket_api.WebSocketAPI.get_data" title="Link to this definition"></a></dt>
+<dd><p>Get the latest data received from the WebSocket.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code>]</span></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>Dict[str, Any]</em> – The latest data.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pymirokai.core.websocket_api.WebSocketAPI.publish">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">publish</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">topic</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.core.websocket_api.WebSocketAPI.publish" title="Link to this definition"></a></dt>
+<dd><p>Publish data to a topic.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>topic</strong> (<em>str</em>) – The topic to publish to.</p></li>
+<li><p><strong>data</strong> (<em>str</em>) – The data to publish (JSON format).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pymirokai.core.websocket_api.WebSocketAPI.register_callback">
+<span class="sig-name descname"><span class="pre">register_callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">topic</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.core.websocket_api.WebSocketAPI.register_callback" title="Link to this definition"></a></dt>
+<dd><p>Register a callback function for a topic.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>topic</strong> (<em>str</em>) – The topic to register the callback for.</p></li>
+<li><p><strong>callback</strong> (<em>Callable</em><em>[</em><em>[</em><em>Dict</em><em>[</em><em>str</em><em>, </em><em>Any</em><em>]</em><em>]</em><em>, </em><em>None</em><em>]</em>) – The callback function to call when a</p></li>
+<li><p><strong>topic.</strong> (<em>message is received for the</em>)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pymirokai.core.websocket_api.WebSocketAPI.start">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">start</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ws_url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">get_jwt_token</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.core.websocket_api.WebSocketAPI.start" title="Link to this definition"></a></dt>
+<dd><p>Start the WebSocket connection.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ws_url</strong> (<em>str</em>) – The url of the websocket</p></li>
+<li><p><strong>get_jwt_token</strong> (<em>callable</em>) – Callback to get the JWT token</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pymirokai.core.websocket_api.WebSocketAPI.subscribe">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">subscribe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">topic</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.core.websocket_api.WebSocketAPI.subscribe" title="Link to this definition"></a></dt>
+<dd><p>Subscribe to a topic.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>topic</strong> (<em>str</em>) – The topic to subscribe to.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pymirokai.core.websocket_api.WebSocketAPI.unsubscribe">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">unsubscribe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">topic</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymirokai.core.websocket_api.WebSocketAPI.unsubscribe" title="Link to this definition"></a></dt>
+<dd><p>Unsubscribe from a topic.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>topic</strong> (<em>str</em>) – The topic to unsubscribe from.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="skills_admin.html" class="btn btn-neutral float-left" title="Skills (Admin)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="enums.html" class="btn btn-neutral float-right" title="Enums" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright .</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
