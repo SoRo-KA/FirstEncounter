@@ -1,6 +1,5 @@
-# KACST Use Case Collaboration Repository
+This repo is all about the different usecases that involves socializing with people in the form of meeting and greeting. 
 
-Welcome to the **KACST Use Case Collaboration** repository.  
 This space is dedicated to collaborative work on the different **use cases** and **demo scenarios**.
 
 ## 📁 Repository Structure
@@ -57,4 +56,4 @@ To ensure smooth collaboration, please follow these best practices:
 
 ## 🧠 Purpose
 
-This repository aims to provide a **shared workspace** where the KACST and collaborators can design, develop, and test demo use cases efficiently — ensuring consistency, traceability, and teamwork across all contributions.
+This repository aims to provide a **shared workspace** where we can design, develop, and test demo use cases efficiently — ensuring consistency, traceability, and teamwork across all contributions.
