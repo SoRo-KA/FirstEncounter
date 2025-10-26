@@ -1,8 +1,6 @@
 This repo is all about the different usecases that involves socializing with people in the form of meeting and greeting. 
 
-This space is dedicated to collaborative work on the different **use cases** and **demo scenarios**.
-
-## 📁 Repository Structure
+## Repository Structure
 ```
 root
 │
@@ -31,7 +29,7 @@ root
 
 ---
 
-## 🧩 Collaboration Guidelines
+## Collaboration Guidelines
 
 To ensure smooth collaboration, please follow these best practices:
 
@@ -54,6 +52,6 @@ To ensure smooth collaboration, please follow these best practices:
 
 ---
 
-## 🧠 Purpose
+## Purpose
 
 This repository aims to provide a **shared workspace** where we can design, develop, and test demo use cases efficiently — ensuring consistency, traceability, and teamwork across all contributions.
