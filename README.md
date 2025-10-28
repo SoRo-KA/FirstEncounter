@@ -1,3 +1,4 @@
+This project investigates how first impressions form and evolve during early human-robot interactions.
 This repo is all about the different usecases that involves socializing with people in the form of meeting and greeting. 
 
 ## Repository Structure
