@@ -1,52 +1,22 @@
-# Observation Reports (HRI Events)
+# Observation Reports – Meet and Greet Usecases
 
-Purpose:
-Store structured observation logs from human-robot interaction events.
+This folder contains field reports from public deployments of our robot in booths and events.
 
-Scope:
-Reports describe what happened, not interpretations or conclusions.
+## Purpose
+Each report captures **incidental human–robot encounters** — unplanned, natural interactions observed during real events.
 
-File Format:
-Use one report file per event. Name as:
-YYYY-MM-DD_event-location_observer.md
+## How to Submit
+1. Fill out the **Field Observation Report** after your observation block.
+2. Save the file using this format:
+HealthForum_Sara_2025-11-03.docx
+3. Upload your report to this folder:  
+[observations/ on GitHub](https://github.com/SoRo-KA/MeetandGreet/blob/master/observations/)
 
-Report Structure:
-1. Event Context
-   - Date
-   - Location
-   - Robot platform
-   - Task or scenario
-   - Observer name
+---
 
-2. Participants
-   - Number of humans
-   - Roles (e.g., operator, bystander)
-   - Relevant demographics if approved for collection
+## Guidelines
+- Keep entries factual and concise.  
+- No personal data or identifying details about participants.  
+- If you add photos, maps, or diagrams, place them in the same folder and reference them in your report.  
 
-3. Procedure
-   - Step-by-step actions or phases of the interaction
-   - No interpretations
-
-4. Observable Behaviors
-   - Human actions
-   - Robot actions
-   - Timing, sequence, triggers
-
-5. Noted Breakdowns or Unexpected Events
-   - What happened
-   - Time or condition
-
-6. Environment Conditions
-   - Lighting
-   - Noise
-   - Space layout
-
-7. Raw Notes
-   - Direct quotes if applicable
-   - Observed gestures or reactions
-   - Avoid adding meaning or inference
-
-Exclusions:
-- Do not speculate on intentions or emotions.
-- Do not store personal identifiers unless the study protocol explicitly allows it.
-
+---
