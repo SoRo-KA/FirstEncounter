@@ -9,7 +9,7 @@ Each report captures **incidental human–robot encounters** — unplanned, natu
 1. Fill out the **Field Observation Report** after your observation block.
 2. Save the file using this format:
 HealthForum_Sara_2025-11-03.pdf
-3. Upload your report to this folder:  
+3. Upload your report to sharepoint then archive to this folder:  
 [observations/ on GitHub](https://github.com/SoRo-KA/MeetandGreet/blob/master/observations/)
 
 ---
