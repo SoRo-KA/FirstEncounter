@@ -1,0 +1,12 @@
+=== 📜 TYPES D'ÉVÉNEMENTS DÉTECTÉS ===
+ - MissionEvent
+ - PerceptionEvent
+ - TTSEvent
+
+=== 🕒 TIMELINE RECONSTITUÉE ===
+[14:03:08] ⚙️ Robot called function: check_internet_connectivity
+[14:03:35] 👂 Robot heard: "hello there"
+[14:03:47] 🗣️ Robot said: "Salut BG"
+[14:06:57] ⚙️ Robot called function: nose_dive
+[14:22:01] 👂 Robot heard: "Salut Miroka!"
+[14:24:59] 👂 Robot heard: "waiting for an API key"
