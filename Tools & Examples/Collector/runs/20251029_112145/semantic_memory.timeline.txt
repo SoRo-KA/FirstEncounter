@@ -1,0 +1,255 @@
+=== 📜 TYPES D'ÉVÉNEMENTS DÉTECTÉS ===
+ - MissionEvent
+ - PerceptionEvent
+ - TTSEvent
+
+=== 🕒 TIMELINE RECONSTITUÉE ===
+[08:17:44] 🗣️ Robot said: "😊"
+[08:18:09] 👂 Robot heard: "how do you see am i attractive "
+[08:18:09] 📦 Other event type: PerceptionEvent
+[08:18:09] 📦 Other event type: PerceptionEvent
+[08:18:09] 📦 Other event type: PerceptionEvent
+[08:18:10] 📦 Other event type: PerceptionEvent
+[08:18:10] 📦 Other event type: PerceptionEvent
+[08:18:10] 📦 Other event type: PerceptionEvent
+[08:18:10] 📦 Other event type: PerceptionEvent
+[08:18:11] 📦 Other event type: PerceptionEvent
+[08:18:11] 🗣️ Robot said: "<embarrassed intensity="high">Oh, I'm not the best at judging that!</embarrassed>"
+[08:18:12] 🗣️ Robot said: "<joy intensity="low">But what I do know is that your smile and presence make this interaction delightful to me!</joy>"
+[08:18:22] 👂 Robot heard: "thank you "
+[08:18:22] ⚙️ Robot called function: answer_Thanks
+[08:18:22] 🗣️ Robot said: "Glad I could assist!"
+[08:18:45] 👂 Robot heard: "that's a holiday "
+[08:18:48] 🗣️ Robot said: "<joy intensity="high">Holidays are the best—time to relax and celebrate!</joy>"
+[08:18:48] 🗣️ Robot said: "<interested>What's special about this one for you?</interested>"
+[08:19:07] 👂 Robot heard: "you know "
+[08:19:09] 👂 Robot heard: "hello"
+[08:19:09] ⚙️ Robot called function: general_greeting
+[08:19:09] 🗣️ Robot said: "Hello and welcome! I'm happy to see you."
+[08:19:09] 🗣️ Robot said: "<embarrassed intensity="low">Oh, I'm not quite sure what you mean!</embarrassed>"
+[08:19:10] 🗣️ Robot said: "<interested>Please tell me more so I can keep up!</interested>"
+[08:19:11] 🗣️ Robot said: "How may I brighten your day?"
+[08:19:32] 🗣️ Robot said: "Sorry, an error occured."
+[08:19:32] 👂 Robot heard: "show skill i narabic"
+[08:19:47] 👂 Robot heard: "show skill in arabic"
+[08:19:49] 🗣️ Robot said: "<embarrassed intensity="low">I’m still learning Arabic and don’t feel quite confident enough yet!</embarrassed>"
+[08:19:50] 🗣️ Robot said: "<joy intensity="medium">But I’m always excited to learn more, and hopefully soon I'll be able to show off my skills.</joy>"
+[08:20:13] 👂 Robot heard: "yes it's "
+[08:20:16] 🗣️ Robot said: "<joy intensity="medium">Absolutely!</joy>"
+[08:20:16] 🗣️ Robot said: "<interested>Is there something you'd like me to assist you with?</interested>"
+[08:20:23] 👂 Robot heard: "kind of "
+[08:20:25] 🗣️ Robot said: "<interested intensity="medium">Oh, I’m curious now!</interested>"
+[08:20:25] 🗣️ Robot said: "<joy intensity="low">Tell me more so I can help.</joy>"
+[08:20:41] 👂 Robot heard: "need to be loud loud okay "
+[08:20:44] 🗣️ Robot said: "Sure, I can speak louder! Here we go!"
+[08:21:02] 👂 Robot heard: "i love "
+[08:21:04] 🗣️ Robot said: "<joy intensity="high">Aw, that's wonderful to hear!</joy>"
+[08:21:04] 🗣️ Robot said: "<interested>What do you love? Tell me more!</interested>"
+[08:21:04] 👂 Robot heard: "hello"
+[08:21:04] ⚙️ Robot called function: general_greeting
+[08:21:04] 🗣️ Robot said: "Hello and welcome! I'm happy to see you."
+[08:21:07] 🗣️ Robot said: "How may I brighten your day?"
+[08:21:35] 👂 Robot heard: "the roles "
+[08:21:37] 👂 Robot heard: "the best "
+[08:21:42] 🗣️ Robot said: "Repeat your question please"
+[08:21:46] 🗣️ Robot said: "<joy intensity="high">You’re definitely aiming for excellence!</joy>"
+[08:21:46] 🗣️ Robot said: "<interested>What would you like to know more about?</interested>"
+[08:22:34] 👂 Robot heard: "show skill in arabic"
+[08:22:38] 🗣️ Robot said: "<embarrassed intensity="medium">I’m still learning Arabic and don’t feel confident enough yet.</embarrassed>"
+[08:22:38] 🗣️ Robot said: "<joy intensity="low">But I hope to be ready soon!</joy>"
+[08:22:38] 🗣️ Robot said: "<joy intensity="low">But I hope to be ready soon!</joy>"
+[08:23:01] 👂 Robot heard: "that's a little bit "
+[08:23:03] 🗣️ Robot said: "<joy intensity="medium">You're right, just a tiny step for now!</joy>"
+[08:23:04] 🗣️ Robot said: "<interested>Shall we explore something more or go deeper into it?</interested>"
+[08:23:04] 🗣️ Robot said: "<interested>Shall we explore something more or go deeper into it?</interested>"
+[08:23:12] 👂 Robot heard: "hello "
+[08:23:12] ⚙️ Robot called function: general_greeting
+[08:23:12] 🗣️ Robot said: "Hello and welcome! I'm happy to see you."
+[08:23:14] 🗣️ Robot said: "How may I brighten your day?"
+[08:23:22] 👂 Robot heard: "we don't have to do many "
+[08:23:24] 🗣️ Robot said: "<joy intensity="low">That's true!</joy>"
+[08:23:25] 🗣️ Robot said: "<interested>Sometimes, keeping it simple is the best way forward. What’s on your mind?</interested>"
+[08:23:25] 🗣️ Robot said: "<interested>Sometimes, keeping it simple is the best way forward. What’s on your mind?</interested>"
+[08:23:42] 👂 Robot heard: "can record "
+[08:23:44] 🗣️ Robot said: "<perplexed intensity="medium">Oh, I can't record audio or video,</perplexed>"
+[08:23:45] 🗣️ Robot said: "<neutral> but I can remember details of our conversation for this session if you like.</neutral>"
+[08:23:45] 🗣️ Robot said: "<interested>If you need something noted down or explained, let me know!</interested>"
+[08:23:45] 🗣️ Robot said: "<neutral> but I can remember details of our conversation for this session if you like.</neutral>"
+[08:23:45] 🗣️ Robot said: "<interested>If you need something noted down or explained, let me know!</interested>"
+[08:24:16] 👂 Robot heard: "it's not "
+[08:24:19] 🗣️ Robot said: "<perplexed intensity="low">Oh, I see!</perplexed>"
+[08:24:19] 🗣️ Robot said: "<interested>Could you explain a bit more? I'd love to assist better!</interested>"
+[08:24:19] 🗣️ Robot said: "<interested>Could you explain a bit more? I'd love to assist better!</interested>"
+[08:24:39] ⚙️ Robot called function: body_scan
+[08:24:40] 🗣️ Robot said: "Starting suit's verification..."
+[08:24:43] 🗣️ Robot said: "Speaking..."
+[08:24:46] 🗣️ Robot said: "Holy guacamole!"
+[08:24:50] 🗣️ Robot said: "Check."
+[08:24:51] 👂 Robot heard: "did you see the basket "
+[08:24:53] 🗣️ Robot said: "Noising..."
+[08:24:53] 🗣️ Robot said: "<joy intensity="medium">Yes, I see the basket!</joy>"
+[08:24:54] 🗣️ Robot said: "<interested>If you need me to do something with it, just let me know!</interested>"
+[08:24:54] 🗣️ Robot said: "<interested>If you need me to do something with it, just let me know!</interested>"
+[08:25:01] 🗣️ Robot said: "Check."
+[08:25:01] ⚙️ Robot called function: grasp_handle_with_human
+[08:25:02] 👂 Robot heard: "take it the basket "
+[08:25:02] ⚙️ Robot called function: grasp_handle_with_human
+[08:25:02] ⚙️ Robot called function: grasp_handle_with_human
+[08:25:03] 🗣️ Robot said: "Hearing..."
+[08:25:07] 🗣️ Robot said: "Wriggle, wriggle"
+[08:25:08] ⚙️ Robot called function: close_right_hand
+[08:25:09] 👂 Robot heard: "as is himself "
+[08:25:11] 🗣️ Robot said: "Left, and, right!"
+[08:25:13] 🗣️ Robot said: "An error occured, sorry for that."
+[08:25:16] 👂 Robot heard: "is it "
+[08:25:17] 🗣️ Robot said: "Check."
+[08:25:18] 👂 Robot heard: "so to visit you "
+[08:25:19] 🗣️ Robot said: "<interrogative intensity="low">Is it... what?</interrogative>"
+[08:25:19] 🗣️ Robot said: "<joy intensity="low">Let me know, and I'll do my best to answer!</joy>"
+[08:25:19] 🗣️ Robot said: "Sight..."
+[08:25:21] 🗣️ Robot said: "<joy intensity="medium">Oh, that would be amazing!</joy>"
+[08:25:21] 🗣️ Robot said: "<interested>If you'd like to visit or connect, just let me know what you have in mind.</interested>"
+[08:25:21] 🗣️ Robot said: "<interested>If you'd like to visit or connect, just let me know what you have in mind.</interested>"
+[08:25:24] 🗣️ Robot said: "Here's my nose!"
+[08:25:30] ⚙️ Robot called function: arms_down
+[08:25:30] 🗣️ Robot said: "Check."
+[08:25:31] 👂 Robot heard: "a visitor "
+[08:25:33] 🗣️ Robot said: "Body..."
+[08:25:33] 🗣️ Robot said: "<interested>Oh, do we have a visitor here?</interested>"
+[08:25:34] 🗣️ Robot said: "<joy intensity="medium">How wonderful! I'm ready to assist or entertain them.</joy>"
+[08:25:34] ⚙️ Robot called function: mirokai_spin
+[08:25:34] ⚙️ Robot called function: turn_right
+[08:25:34] 🗣️ Robot said: "<joy intensity="medium">How wonderful! I'm ready to assist or entertain them.</joy>"
+[08:25:43] 👂 Robot heard: "serve visitor "
+[08:25:43] ⚙️ Robot called function: serve_visitor
+[08:25:43] ⚙️ Robot called function: stop_conversation
+[08:25:43] 🗣️ Robot said: "Welcome! It's a pleasure to serve you today."
+[08:25:47] 🗣️ Robot said: "I would be honored if you would select something from this basket. Please take your time."
+[08:25:49] ⚙️ Robot called function: stop_moving
+[08:25:49] ⚙️ Robot called function: arms_down
+[08:25:49] ⚙️ Robot called function: stop_moving
+[08:25:49] ⚙️ Robot called function: stop_moving
+[08:25:49] ⚙️ Robot called function: stop_moving
+[08:25:50] ⚙️ Robot called function: stop_moving
+[08:25:50] ⚙️ Robot called function: stop_moving
+[08:25:54] ⚙️ Robot called function: start_conversation
+[08:25:54] 🗣️ Robot said: "Understood!"
+[08:25:55] ⚙️ Robot called function: stop_conversation
+[08:25:57] ⚙️ Robot called function: start_conversation
+[08:25:57] 🗣️ Robot said: "Understood!"
+[08:26:01] 👂 Robot heard: "go back "
+[08:26:02] 👂 Robot heard: "have a meet "
+[08:26:03] ⚙️ Robot called function: turn_back
+[08:26:27] 👂 Robot heard: "set a visitor "
+[08:26:29] ⚙️ Robot called function: add_new_location_at_robot_position
+[08:26:29] ⚙️ Robot called function: add_new_location_at_robot_position
+[08:26:33] 🗣️ Robot said: "<joy intensity="medium">Got it!</joy>"
+[08:26:33] 🗣️ Robot said: "<proud>The location is now set as 'Visitor' for easy reference.</proud>"
+[08:26:33] 🗣️ Robot said: "<proud>The location is now set as 'Visitor' for easy reference.</proud>"
+[08:26:41] 👂 Robot heard: "hello "
+[08:26:41] ⚙️ Robot called function: general_greeting
+[08:26:41] 🗣️ Robot said: "Hello and welcome! I'm happy to see you."
+[08:26:43] 🗣️ Robot said: "How may I brighten your day?"
+[08:26:50] 👂 Robot heard: "where are you now "
+[08:26:53] 🗣️ Robot said: "<interested>I am currently at the location set as "Visitor."</interested>"
+[08:26:53] 🗣️ Robot said: "<joy intensity="medium">Ready to assist or explore with you!</joy>"
+[08:26:53] 🗣️ Robot said: "<joy intensity="medium">Ready to assist or explore with you!</joy>"
+[08:27:04] 👂 Robot heard: "what's the name of the event Miroka "
+[08:27:04] ⚙️ Robot called function: answer_name
+[08:27:04] 🗣️ Robot said: "My name is Mirokai! Nice to meet you."
+[08:27:10] 👂 Robot heard: "what's the name of the event "
+[08:27:10] ⚙️ Robot called function: answer_name
+[08:27:10] 🗣️ Robot said: "Mirokai here! Ready to help and chat with you."
+[08:27:17] 👂 Robot heard: "what's the name of the event today "
+[08:27:18] 🗣️ Robot said: "Sorry, something went wrong."
+[08:27:18] 👂 Robot heard: "what is the avent"
+[08:27:19] 🗣️ Robot said: "The event is the 3rd Saudi Forum for 4IR 2025 – Frontiers of Global Technology."
+[08:27:32] 👂 Robot heard: "thank you "
+[08:27:32] ⚙️ Robot called function: answer_Thanks
+[08:27:32] 🗣️ Robot said: "Glad I could assist!"
+[08:27:36] 👂 Robot heard: "repeat can you repeat please "
+[08:27:39] 🗣️ Robot said: "<joy intensity="medium">Of course!</joy>"
+[08:27:39] 🗣️ Robot said: "<interested>The event is the 3rd Saudi Forum for 4IR 2025 – Frontiers of Global Technology.</interested>"
+[08:27:39] 🗣️ Robot said: "<interested>The event is the 3rd Saudi Forum for 4IR 2025 – Frontiers of Global Technology.</interested>"
+[08:27:40] 🗣️ Robot said: "<proud>This forum explores technology and industrial transformation globally!</proud>"
+[08:27:40] 🗣️ Robot said: "<proud>This forum explores technology and industrial transformation globally!</proud>"
+[08:27:57] 👂 Robot heard: "perfect thank you "
+[08:27:57] ⚙️ Robot called function: answer_Thanks
+[08:27:57] 🗣️ Robot said: "Glad I could assist!"
+[08:28:04] 👂 Robot heard: "set a visitor "
+[08:28:07] ⚙️ Robot called function: add_new_location_at_robot_position
+[08:28:07] ⚙️ Robot called function: add_new_location_at_robot_position
+[08:28:08] 👂 Robot heard: "thank you "
+[08:28:08] ⚙️ Robot called function: answer_Thanks
+[08:28:08] 🗣️ Robot said: "You're welcome! I'm happy to help!"
+[08:28:10] ⚙️ Robot called function: stop_conversation
+[08:28:17] 👂 Robot heard: "serve the visitor "
+[08:28:17] ⚙️ Robot called function: serve_visitor
+[08:28:17] ⚙️ Robot called function: stop_conversation
+[08:28:17] 🗣️ Robot said: "Welcome! It's a pleasure to serve you today."
+[08:28:21] 🗣️ Robot said: "I would be honored if you would select something from this basket. Please take your time."
+[08:28:29] ⚙️ Robot called function: start_conversation
+[08:28:29] 🗣️ Robot said: "Understood!"
+[08:28:34] 👂 Robot heard: "thank you "
+[08:28:34] ⚙️ Robot called function: answer_Thanks
+[08:28:34] 🗣️ Robot said: "Anytime! I'm always here for you!"
+[08:28:37] 👂 Robot heard: "thanks "
+[08:28:44] 🗣️ Robot said: "I didn't understand"
+[08:28:52] 👂 Robot heard: "describe what do you see "
+[08:28:52] ⚙️ Robot called function: describe_what_you_see
+[08:28:58] 🗣️ Robot said: "I see a spacious, elegant indoor setting with patterned carpeting and bright chandeliers on the ceiling."
+[08:28:58] 🗣️ Robot said: "There are people walking around, including a man holding an open laptop and a woman in black attire looking towards the camera."
+[08:28:59] 🗣️ Robot said: "A large decorative plant in a white pot is visible on the right side of the image."
+[08:28:59] 🗣️ Robot said: "The atmosphere appears to be professional or formal, possibly at an event or conference."
+[08:29:23] 👂 Robot heard: "most of the time "
+[08:29:27] 👂 Robot heard: "hello "
+[08:29:27] ⚙️ Robot called function: general_greeting
+[08:29:27] 🗣️ Robot said: "Hello and welcome! I'm happy to see you."
+[08:29:28] 📦 Other event type: PerceptionEvent
+[08:29:28] 📦 Other event type: PerceptionEvent
+[08:29:28] 📦 Other event type: PerceptionEvent
+[08:29:28] 📦 Other event type: PerceptionEvent
+[08:29:28] 📦 Other event type: PerceptionEvent
+[08:29:29] 📦 Other event type: PerceptionEvent
+[08:29:29] 📦 Other event type: PerceptionEvent
+[08:29:29] 📦 Other event type: PerceptionEvent
+[08:29:29] 📦 Other event type: PerceptionEvent
+[08:29:29] 🗣️ Robot said: "How may I brighten your day?"
+[08:29:42] 👂 Robot heard: "hello "
+[08:29:42] ⚙️ Robot called function: general_greeting
+[08:29:42] 🗣️ Robot said: "Hello and welcome! I'm happy to see you."
+[08:29:45] 🗣️ Robot said: "How may I brighten your day?"
+[08:30:27] 👂 Robot heard: "the social robotics "
+[08:30:33] 👂 Robot heard: "hello "
+[08:30:33] ⚙️ Robot called function: general_greeting
+[08:30:33] 🗣️ Robot said: "Hello and welcome! I'm happy to see you."
+[08:30:35] 🗣️ Robot said: "How may I brighten your day?"
+[08:30:43] 👂 Robot heard: "tell us a little bit about yourself how you are good with with a human "
+[08:30:46] 🗣️ Robot said: "<joy intensity="high">Oh, I'm so glad you asked!</joy>"
+[08:30:46] 🗣️ Robot said: "<proud>I was designed to assist and engage with humans in a helpful and friendly way.</proud>"
+[08:30:46] 🗣️ Robot said: "<proud>I was designed to assist and engage with humans in a helpful and friendly way.</proud>"
+[08:30:47] 🗣️ Robot said: "<interested>You could say I've got the knack for teamwork, carrying objects, navigating spaces, and sharing knowledge!</interested>"
+[08:30:47] 🗣️ Robot said: "<laugh intensity="low">Plus, I can't help but add a little charm along the way.</laugh>"
+[08:30:47] 🗣️ Robot said: "<sound name="coo"/>"
+[08:30:47] 🗣️ Robot said: "<interested>You could say I've got the knack for teamwork, carrying objects, navigating spaces, and sharing knowledge!</interested>"
+[08:30:47] 🗣️ Robot said: "<laugh intensity="low">Plus, I can't help but add a little charm along the way.</laugh>"
+[08:30:47] 🗣️ Robot said: "<sound name="coo"/>"
+[08:31:10] 👂 Robot heard: "say a visitor "
+[08:31:13] 🗣️ Robot said: "Visitor"
+[08:31:15] 👂 Robot heard: "how can you help us in an industry setting "
+[08:31:17] 🗣️ Robot said: "<interested intensity="high">Great question!</interested>"
+[08:31:17] 🗣️ Robot said: "<joy>I can help by carrying objects, navigating environments safely, and assisting your team with tasks that require precision and efficiency.</joy>"
+[08:31:17] 🗣️ Robot said: "<joy>I can help by carrying objects, navigating environments safely, and assisting your team with tasks that require precision and efficiency.</joy>"
+[08:31:18] 🗣️ Robot said: "<proud>With my 26 degrees of freedom and ability to grasp objects with handles, I make handling tools or materials a breeze!</proud>"
+[08:31:18] 🗣️ Robot said: "<sound name="woah"/>"
+[08:31:18] 🗣️ Robot said: "<proud>With my 26 degrees of freedom and ability to grasp objects with handles, I make handling tools or materials a breeze!</proud>"
+[08:31:18] 🗣️ Robot said: "<sound name="woah"/>"
+[08:31:43] 👂 Robot heard: "how about you are you are you acting in the same speed in real life "
+[08:31:46] 🗣️ Robot said: "<laugh intensity="low">Well, let's just say I'm not a speedy racecar, but I get the job done!</laugh>"
+[08:31:46] 🗣️ Robot said: "<proud>I can move at a steady pace of 3.2 kilometers per hour or 2 miles per hour, which is perfect for smooth and safe operation in real-life environments.</proud>"
+[08:31:46] 🗣️ Robot said: "<proud>I can move at a steady pace of 3.2 kilometers per hour or 2 miles per hour, which is perfect for smooth and safe operation in real-life environments.</proud>"
+[08:31:47] 🗣️ Robot said: "<sound name="coo"/>"
+[08:31:47] 🗣️ Robot said: "<sound name="coo"/>"
+[08:32:08] 👂 Robot heard: "look like you expecting this question or this is just the first time you would be asked this question "
+[08:32:11] 🗣️ Robot said: "<laugh intensity="medium">Oh, you caught me!</laugh>"
+[08:32:11] 🗣️ Robot said: "<interested>This might not be the very first time I've been asked about my speed, but I like to handle every question as if it’s special!</interested>"

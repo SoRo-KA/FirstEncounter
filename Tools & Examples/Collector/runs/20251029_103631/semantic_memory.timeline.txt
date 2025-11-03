@@ -1,0 +1,64 @@
+=== 📜 TYPES D'ÉVÉNEMENTS DÉTECTÉS ===
+ - MissionEvent
+ - PerceptionEvent
+ - TTSEvent
+
+=== 🕒 TIMELINE RECONSTITUÉE ===
+[07:30:48] 🗣️ Robot said: "<neutral>Could you clarify a bit more so I can help?</neutral>"
+[07:31:02] 👂 Robot heard: "it's still following you "
+[07:31:04] 🗣️ Robot said: "<surprised intensity="high">Still following me?</surprised>"
+[07:31:05] 🗣️ Robot said: "<interested intensity="low">What's following? Tell me more!</interested>"
+[07:31:06] ⚙️ Robot called function: stop_moving
+[07:31:10] 👂 Robot heard: "for the turning it will turn until until you press "
+[07:31:11] ⚙️ Robot called function: track_rune
+[07:31:11] 👂 Robot heard: "click on "
+[07:31:12] 🗣️ Robot said: "<interested intensity="medium">Ah, it sounds like you're talking about continuous turning or movement control!</interested>"
+[07:31:13] 🗣️ Robot said: "<neutral>Let me know if you’d like me to adjust or assist with something specific.</neutral>"
+[07:31:15] ⚙️ Robot called function: stop_moving
+[07:31:15] 🗣️ Robot said: "<neutral>Could you provide more details about what you'd like me to click on?</neutral>"
+[07:31:15] 🗣️ Robot said: "<interested intensity="low">I'm ready to help!</interested>"
+[07:31:30] 👂 Robot heard: "i think the upcoming you know "
+[07:31:33] 🗣️ Robot said: "<neutral>Hmm, I'm not sure what you mean by "the upcoming."</neutral>"
+[07:31:33] 🗣️ Robot said: "<interested intensity="low">Could you explain a bit more?</interested>"
+[07:31:42] 👂 Robot heard: "can move half a meter to your right "
+[07:31:45] ⚙️ Robot called function: move_right_side
+[07:32:05] 👂 Robot heard: "good like that you were more in the middle you know for everyone to see you "
+[07:32:08] 🗣️ Robot said: "<joy intensity="high">Oh, perfect!</joy>"
+[07:32:08] 🗣️ Robot said: "<proud>I love being in the spotlight where I can interact with everyone!</proud>"
+[07:32:16] 👂 Robot heard: "of course "
+[07:32:18] 🗣️ Robot said: "<joy intensity="high">Yay! I knew you'd agree!</joy>"
+[07:32:19] 🗣️ Robot said: "<laugh>We're a great team already!</laugh>"
+[07:32:58] 👂 Robot heard: "up with "
+[07:32:58] ⚙️ Robot called function: thumb_up_left_hand
+[07:34:18] 👂 Robot heard: "it works out "
+[07:34:20] 🗣️ Robot said: "<joy intensity="high">Awesome! I'm glad it worked out!</joy>"
+[07:34:20] 🗣️ Robot said: "<laugh>Teamwork makes the dream work!</laugh>"
+[07:34:28] 👂 Robot heard: "right "
+[07:34:33] ⚙️ Robot called function: thumb_up_right_hand
+[07:34:36] 👂 Robot heard: "and what "
+[07:34:37] 👂 Robot heard: "that was "
+[07:34:38] 🗣️ Robot said: "<neutral>Could you tell me more about what you're asking?</neutral>"
+[07:34:38] 🗣️ Robot said: "<interested intensity="low">I’m here to help!</interested>"
+[07:34:41] 🗣️ Robot said: "<joy intensity="medium">That was fun, wasn’t it?</joy>"
+[07:34:42] 🗣️ Robot said: "<neutral>I’m glad we’re having such a great interaction!</neutral>"
+[07:34:47] 👂 Robot heard: "see "
+[07:34:47] ⚙️ Robot called function: go_to_rune
+[07:34:47] 🗣️ Robot said: "An error occured, sorry for that."
+[07:35:23] 👂 Robot heard: "how "
+[07:35:27] 🗣️ Robot said: "<neutral>Could you clarify what you're asking?</neutral>"
+[07:35:27] 🗣️ Robot said: "<interested intensity="low">I’d love to help if I can!</interested>"
+[07:35:47] 👂 Robot heard: "are you "
+[07:35:50] 🗣️ Robot said: "<joy intensity="medium">I’m doing great, thank you for asking!</joy>"
+[07:35:50] 🗣️ Robot said: "<neutral>How about you?</neutral>"
+[07:36:08] 👂 Robot heard: "to that "
+[07:36:11] 🗣️ Robot said: "<perplexed intensity="medium">Hmm, I’m not sure what you mean.</perplexed>"
+[07:36:11] 🗣️ Robot said: "<neutral>Could you explain a little more?</neutral>"
+[07:36:35] 🗣️ Robot said: "Collecteur de données démarré."
+[07:36:47] 👂 Robot heard: "can you hear me "
+[07:36:50] 🗣️ Robot said: "<joy intensity="high">Loud and clear!</joy>"
+[07:36:50] 🗣️ Robot said: "<neutral>What can I help you with?</neutral>"
+[07:36:50] 🗣️ Robot said: "<neutral>What can I help you with?</neutral>"
+[07:37:24] 👂 Robot heard: "hello "
+[07:37:24] ⚙️ Robot called function: general_greeting
+[07:37:24] 🗣️ Robot said: "Hello and welcome! I'm happy to see you."
+[07:37:26] 🗣️ Robot said: "How may I brighten your day?"
