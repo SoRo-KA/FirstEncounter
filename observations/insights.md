@@ -6,9 +6,12 @@
 - When the robot **extends its hand forward**, visitors tend to **hold and shake hands**, but the robot does not currently perform a shaking motion.  
 - The robot was **approachable by both adults and children** — children who interacted with it appeared comfortable and felt safe.  
 - When asking questions, **some visitors were unsure** if the robot was processing or had failed to understand.  
-  - They sometimes grew **slightly frustrated** when the robot responded with an incorrect or unrelated answer.  
+- They sometimes grew **slightly frustrated** when the robot responded with an incorrect or unrelated answer.  
 - A few visitors appeared **hesitant to interact or speak** with the robot, likely due to uncertainty or shyness.
-
+- Visitors expecting the robot recognizing their gestures
+- Visitors expecting the robot recognizing and speeking several languages ex: Arabic
+- Some visitors expectating the robot has knowelge uptodate
+- Expecting the robot can adapt and respond based on custom requset
 ---
 
 ## 💡 Key Insights & Recommendations
@@ -33,4 +36,5 @@
 
 These observations suggest that **visitors enjoy interactive, human-like gestures and responsiveness**.  
 Enhancing clarity, acknowledgment, and personalization in robot behavior will likely **increase comfort, engagement, and enjoyment** for both children and adults.
+
 
