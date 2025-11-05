@@ -31,10 +31,36 @@
 - Having Abilitt to distinguish between kids/adults
 
 ---
+## 🚦 Readiness Issues
 
+- **Conversation Flow Readiness** observations highlight that the robot wasn't ready for natural conversation patterns. Your notes show "people upset about continuing talking" as noted an "elderly foreign visitor" who "struggled to keep the flow" when the robot spoke over him.
+
+- **Gesture Recognition Gap** observation that "some thought she recognize their gesture"  and  about "Visual-Description Skill Not Triggering" when visitors held up objects. This indicates the robot wasn't ready with reliable visual input processing despite visitor expectations.
+
+-**Physical Interaction Confusion** notes about handshake confusion ("confused about which hand") where visitors misinterpreted waving as handshake invitations. The robot wasn't ready with clear gestural communication.
+
+- **Language Capability Limitations**  observation that "Some people ask if she talk Arabic" 
+
+- **Interaction Initiation Readiness** the notes identify hesitation in visitor engagement. Your observation that "Some need invitation to interact" . The robot wasn't ready with clear approachability signals.
+
+## ⏱️ Timing Issues
+
+- **Turn-Taking Timing**  as noted a major issue: "the robot kept responding too soon" and "failed to detect when a person had finished speaking.
+
+- **Response Delay**s  as observed "Long or inconsistent delays between user speech and robot replies" causing visitors to repeat themselves. This timing inconsistency degraded the interaction experience.
+
+- **Interaction Closure Timing**  the observation that "when say bye they expected to wave her hand" , showing timing issues with conversation closure.
+
+- **Movement Timing**  as noted about a person who "start moving she afraid" reflects timing issues with motion initiation.
+
+- **Engagement Duration Timing**  As observed "Engagement ranged from deep curiosity to total indifference. Some visitors spent up to 10 minutes interacting, others only a few seconds," showing inconsistent timing in sustaining engagement.
+
+These findings suggest significant work is needed on both readiness (capabilities matching expectations) and timing (natural rhythm of interaction) before the robot will provide consistently satisfying interactions in public setting
+---
 ## 🧭 Summary
 
 These observations suggest that **visitors enjoy interactive, human-like gestures and responsiveness**.  
 Enhancing clarity, acknowledgment, and personalization in robot behavior will likely **increase comfort, engagement, and enjoyment** for both children and adults.
+
 
 
