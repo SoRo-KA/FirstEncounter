@@ -55,13 +55,15 @@
 - **Movement Timing**  as noted about a person who "start moving she afraid" reflects timing issues with motion initiation.
 
 - **Engagement Duration Timing**  As observed "Engagement ranged from deep curiosity to total indifference. Some visitors spent up to 10 minutes interacting, others only a few seconds," showing inconsistent timing in sustaining engagement.
-**
-These findings suggest significant work is needed on both readiness (capabilities matching expectations) and timing (natural rhythm of interaction) before the robot will provide consistently satisfying interactions in public setting**
+
+
+These findings suggest significant work is needed on both readiness (capabilities matching expectations) and timing (natural rhythm of interaction) before the robot will provide consistently satisfying interactions in public setting
 ---
 ## 🧭 Summary
 
 These observations suggest that **visitors enjoy interactive, human-like gestures and responsiveness**.  
 Enhancing clarity, acknowledgment, and personalization in robot behavior will likely **increase comfort, engagement, and enjoyment** for both children and adults.
+
 
 
 
