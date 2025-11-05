@@ -24,6 +24,8 @@
 - Introduce a feature where the robot **invites people to interact**, perhaps mentioning what it can do (“Would you like to play a game or hear a joke?”).  
 - Consider adding a **joke-telling skill** to make interactions more fun and engaging.  
 - Having the robot **address visitors by name** would create a **more personal and memorable experience**.
+- Having ability to recognise  gestures
+- Having Abilitt to distinguish between kids/adults
 
 ---
 
@@ -31,3 +33,4 @@
 
 These observations suggest that **visitors enjoy interactive, human-like gestures and responsiveness**.  
 Enhancing clarity, acknowledgment, and personalization in robot behavior will likely **increase comfort, engagement, and enjoyment** for both children and adults.
+
