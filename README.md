@@ -10,6 +10,7 @@ root
 │ │ ├── Use Case Definition/
 │ │ ├── Prompt/
 │ │ ├── Scripts/
+│ │ ├── Skills/
 │ │ └── Other/
 │
 ├── Tools & Examples/
