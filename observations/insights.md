@@ -33,7 +33,7 @@
 ---
 ## 🚦 Readiness Issues
 
-- **Conversation Flow Readiness** observations highlight that the robot wasn't ready for natural conversation patterns. Your notes show "people upset about continuing talking" as noted an "elderly foreign visitor" who "struggled to keep the flow" when the robot spoke over him.
+- **Conversation Flow Readiness** observations highlight that the robot wasn't ready for natural conversation patterns. the notes show "people upset about continuing talking" as noted an "elderly foreign visitor" who "struggled to keep the flow" when the robot spoke over him.
 
 - **Gesture Recognition Gap** observation that "some thought she recognize their gesture"  and  about "Visual-Description Skill Not Triggering" when visitors held up objects. This indicates the robot wasn't ready with reliable visual input processing despite visitor expectations.
 
@@ -63,6 +63,7 @@ These findings suggest significant work is needed on both readiness (capabilitie
 
 These observations suggest that **visitors enjoy interactive, human-like gestures and responsiveness**.  
 Enhancing clarity, acknowledgment, and personalization in robot behavior will likely **increase comfort, engagement, and enjoyment** for both children and adults.
+
 
 
 
